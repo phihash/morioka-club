@@ -4,10 +4,8 @@ import Header from '../components/header'
 const page = () => {
   return (
     <>
-    <Header></Header>
-      <p className='text-amber-500'>ssss</p>
       page
-      </>
+    </>
   )
 }
 

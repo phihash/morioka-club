@@ -6,15 +6,21 @@ const Navigation : React.FC<NavigationProps>  = ({activeTab}) => {
   return (
     <nav className="ml-8 text-sm">
         <div className='flex'>
+        <Link href="/about">
           <div className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 p-3 border-b-4  border-b-lime-600 `)}>
-            <Link href="/about">盛岡について</Link>
+              盛岡について
           </div>
-          <div className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800  p-3  border-b-4 `}>
-            <Link href="/food">食べ物</Link>
+          </Link>
+          <Link href="/food">
+          <div className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 p-3 border-b-4  border-b-lime-600 `)}>
+              食べ物
           </div>
-          <div className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800  p-3  border-b-4`}>
-            <Link href="/link">リンク</Link>
+          </Link>
+          <Link href="/link">
+          <div className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 p-3 border-b-4  border-b-lime-600 `)}>
+              リンク
           </div>
+          </Link>
         </div>
       </nav>
   )

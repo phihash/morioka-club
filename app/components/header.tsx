@@ -11,7 +11,7 @@ export default function Header() {
             M-Guide
             </Link>
           </div>
-      <Navigation activeTab='s'></Navigation>
+      <Navigation></Navigation>
       </div>
 
     </header>

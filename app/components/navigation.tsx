@@ -38,7 +38,7 @@ const Navigation : React.FC  = () => {
           </div>
           </Link>
           <Link href="/toilet">
-          <div data-tab="traffic" onClick={clickTab} className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "toilet" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `)}>
+          <div data-tab="toilet" onClick={clickTab} className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "toilet" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `)}>
               トイレ
           </div>
           </Link>

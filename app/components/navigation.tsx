@@ -32,13 +32,13 @@ const Navigation : React.FC  = () => {
               文化
           </div>
           </Link>
-          <Link href="/traffic">
-          <div data-tab="traffic" onClick={clickTab} className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "traffic" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `)}>
+          <Link href="/transportation">
+          <div data-tab="transportation" onClick={clickTab} className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "transportation" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `)}>
               交通
           </div>
           </Link>
           <Link href="/toilet">
-          <div data-tab="traffic" onClick={clickTab} className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "traffic" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `)}>
+          <div data-tab="traffic" onClick={clickTab} className={(`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "toilet" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `)}>
               トイレ
           </div>
           </Link>

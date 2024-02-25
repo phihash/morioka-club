@@ -6,12 +6,12 @@ export default function Header() {
   return (
     <header>
       <div className="container mx-auto">
-          <div className={`${fredoka.className} text-xl font-semibold my-6 ml-8 bg-green-600 text-stone-100 px-3 py-1 rounded-lg w-32 text-center tracking-wider`}>
+          <div className={`${fredoka.className} text-xl font-semibold my-6  bg-green-600 text-stone-100 px-3 py-1 rounded-lg w-32 text-center tracking-wider`}>
           <Link href="/" >
             M-Guide
             </Link>
           </div>
-      <Navigation activeTab='s'></Navigation>
+          <Navigation></Navigation>
       </div>
 
     </header>

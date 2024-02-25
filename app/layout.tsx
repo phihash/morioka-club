@@ -8,6 +8,13 @@ import Header from "./components/header";
 export const metadata: Metadata = {
   title: "盛岡かんたんガイド",
   description: "盛岡かんたんガイド",
+  icons: [
+    {
+      rel: 'apple-touch-icon',
+      sizes: '180x180',
+      url: '/public/icon.png',
+    },
+  ],
 };
 
 export default function RootLayout({

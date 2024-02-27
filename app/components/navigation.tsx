@@ -1,14 +1,9 @@
 "use client"
 import React from 'react'
 import Link from 'next/link';
-import { fredoka ,noto_sans_jp ,m_plus_1p } from '../fonts'
-import { useState } from 'react';
+import {noto_sans_jp } from '../fonts'
 
-const Navigation : React.FC  = () => {
-  const [activeTab ,setActiveTab] = useState(null)
-  const clickTab = (e : any) => {
-    setActiveTab(e.currentTarget.dataset.tab)
-  }
+const Navigation : React.FC<NavigationProps> = ({activeTab ,clickTab}) => {
   return (
     <nav className="text-sm">
       <div className='flex overflow-x-auto'>
@@ -47,8 +42,10 @@ const Navigation : React.FC  = () => {
   )
 }
 
-// interface NavigationProps {
-//   activeTab: string;
-// }
+interface NavigationProps{
+  clickTab: (e: React.MouseEvent<HTMLDivElement>) => void;
+  activeTab:string,
+  setActiveTab: React.Dispatch<React.SetStateAction<string>>;
+}
 
 export default Navigation

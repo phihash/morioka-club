@@ -4,7 +4,7 @@ import TopPageText from "./components/topPageText";
 
 export default function Home() {
   return (
-    <div className="bg-green-100 pb-24">
+    <div className="bg-green-50 pb-24">
       {/* pb-24でした */}
       <div className="py-24">
         <p className={`text-6xl font-semibold ${noto_sans_jp.className} w-max mx-auto mb-6`}>🏳️</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { inter } from './fonts'
+import { inter } from "./fonts";
 import "./globals.css";
 import Header from "./components/header";
 
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   description: "盛岡かんたんガイド",
   icons: [
     {
-      rel: 'apple-touch-icon',
-      sizes: '180x180',
-      url: '/public/icon.png',
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/public/icon.png",
     },
   ],
 };
@@ -25,18 +25,16 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-      <link
+        <link
           rel="apple-touch-icon"
           href="/apple-icon?<generated>"
           type="image/<generated>"
           sizes="<generated>"
-      />
+        />
       </head>
       <body className={inter.className}>
         <Header></Header>
-        <main>
-         {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );

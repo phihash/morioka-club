@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const topPageText  : React.FC<TopPageTextProps> = ({title,content}) => {
+const topPageText: React.FC<TopPageTextProps> = ({ title, content }) => {
   return (
-    <div className='md:px-10 md:py-10 px-8 py-8'>
+    <div className="md:px-10 md:py-10 px-8 py-8">
       <h2 className="text-xl font-bold">{title}</h2>
-       <p className="mt-4 leading-7">{content}</p>
+      <p className="mt-4 leading-7">{content}</p>
     </div>
-  )
-}
+  );
+};
 
-interface TopPageTextProps{
+interface TopPageTextProps {
   title: string;
   content: string;
 }
 
-export default topPageText
+export default topPageText;

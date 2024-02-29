@@ -52,6 +52,7 @@ export default function RootLayout({
         <meta name="twitter:image:type" content="<generated>" />
         <meta name="twitter:image:width" content="<generated>" />
         <meta name="twitter:image:height" content="<generated>" />
+
       </head>
       <body className={inter.className}>
         <Header></Header>

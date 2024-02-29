@@ -10,16 +10,16 @@ export const metadata: Metadata = {
   description: "盛岡かんたんガイド",
   openGraph: {
     title: "盛岡かんたんガイド",
-    description:"盛岡簡単ガイドLINE",
-    locale: 'ja_JP',
-    type: 'website',
+    description: "盛岡簡単ガイドLINE",
+    locale: "ja_JP",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "盛岡かんたんガイドtwitter",
-    description:"Twiiter説明",
-    site: '@hogehoge',
-    creator: '@hogehoge',
+    description: "Twiiter説明",
+    site: "@hogehoge",
+    creator: "@hogehoge",
   },
   icons: [
     {
@@ -45,9 +45,14 @@ export default function RootLayout({
           sizes="<generated>"
         />
         <meta property="og:image" content="<generated>" />
-<meta property="og:image:type" content="<generated>" />
-<meta property="og:image:width" content="<generated>" />
-<meta property="og:image:height" content="<generated>" />
+        <meta property="og:image:type" content="<generated>" />
+        <meta property="og:image:width" content="<generated>" />
+        <meta property="og:image:height" content="<generated>" />
+        <meta name="twitter:image" content="<generated>" />
+        <meta name="twitter:image:type" content="<generated>" />
+        <meta name="twitter:image:width" content="<generated>" />
+        <meta name="twitter:image:height" content="<generated>" />
+
       </head>
       <body className={inter.className}>
         <Header></Header>

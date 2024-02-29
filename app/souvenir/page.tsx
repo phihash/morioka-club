@@ -46,8 +46,6 @@ const SouvenirPage = () => {
   ]);
   const clickSouvenirCategory = (categoryName: string) => {
     const index = selectedCategories.indexOf(categoryName);
-    console.log(selectedCategories);
-    console.log(souvenirItems);
 
     if (index === -1) {
       setSelectedCategories([...selectedCategories, categoryName]);

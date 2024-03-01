@@ -1,4 +1,4 @@
-import { Inter, Roboto_Mono , Fredoka ,Noto_Sans_JP ,M_PLUS_1p} from 'next/font/google'
+import { Inter, Roboto_Mono , Fredoka ,Noto_Sans_JP ,M_PLUS_1p ,Kiwi_Maru ,Zen_Maru_Gothic} from 'next/font/google'
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -8,6 +8,18 @@ export const inter = Inter({
 export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
   display: 'swap',
+})
+
+export const kiwi_maru = Kiwi_Maru({
+  subsets: ['latin'],
+  display: 'swap',
+  weight:["500"]
+})
+
+export const zen_maru_gothic = Zen_Maru_Gothic({
+  subsets: ['latin'],
+  display: 'swap',
+  weight:["400"]
 })
 
 export const noto_sans_jp = Noto_Sans_JP({

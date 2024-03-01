@@ -1,7 +1,11 @@
 import React from "react";
 
-const page = () => {
-  return <div>page</div>;
+const TourPage = () => {
+  return (
+  <div className="w-11/12 mx-auto">
+
+  </div>
+  )
 };
 
-export default page;
+export default TourPage;

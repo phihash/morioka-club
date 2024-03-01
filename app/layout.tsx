@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    images: ['https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg'],
+    card: "summary_large_image",
+    images: ["https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"],
   },
   icons: [
     {
@@ -41,7 +41,10 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-        <meta property="twitter:image" content="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"></meta>
+        <meta
+          property="twitter:image"
+          content="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+        ></meta>
         <meta property="twitter:card" content="summary_large_image"></meta>
       </head>
       <body className={inter.className}>

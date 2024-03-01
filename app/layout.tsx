@@ -15,11 +15,10 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "盛岡かんたんガイドtwitter",
-    description: "Twiiter説明",
-    site: "@hogehoge",
-    creator: "@hogehoge",
+    card: 'summary_large_image',
+    title: 'Next.js',
+    description: 'The React Framework for the Web',
+    images: ['https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg'],
   },
   icons: [
     {
@@ -48,10 +47,13 @@ export default function RootLayout({
         <meta property="og:image:type" content="<generated>" />
         <meta property="og:image:width" content="<generated>" />
         <meta property="og:image:height" content="<generated>" />
-        <meta name="twitter:image" content="<generated>" />
-        <meta name="twitter:image:type" content="<generated>" />
-        <meta name="twitter:image:width" content="<generated>" />
-        <meta name="twitter:image:height" content="<generated>" />
+        <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site:id" content="1467726470533754880" />
+<meta name="twitter:creator" content="@nextjs" />
+<meta name="twitter:creator:id" content="1467726470533754880" />
+<meta name="twitter:title" content="Next.js" />
+<meta name="twitter:description" content="The React Framework for the Web" />
+<meta name="twitter:image" content="https://nextjs.org/og.png" />
 
       </head>
       <body className={inter.className}>

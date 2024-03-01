@@ -28,14 +28,18 @@ const SouvenirPage = () => {
   ];
   const [souvenirItems, setSouvenirItems] = useState([
     { name: "南部せんべい", categories: ["個包装", "日持ちする"], company: "" },
-    { name: "盛岡冷麺", categories: [ "日持ちする"], company: "ぴょんぴょん舎" },
+    { name: "盛岡冷麺", categories: ["日持ちする"], company: "ぴょんぴょん舎" },
     {
       name: "岩手のはちみつ ラングドシャ",
       categories: ["甘い"],
       company: "山本養蜂場",
     },
     { name: "三陸えびせんべい", categories: ["スナック系"], company: "" },
-    { name: "かもめのたまご", categories: ["あんこ","甘い"], company: "さいとう製菓" },
+    {
+      name: "かもめのたまご",
+      categories: ["あんこ", "甘い"],
+      company: "さいとう製菓",
+    },
     { name: "ごま摺り団子", categories: ["あんこ"], company: "" },
     { name: "Cava（サヴァ）缶", categories: ["日持ちする"], company: "" },
     {

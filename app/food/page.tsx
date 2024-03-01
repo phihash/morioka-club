@@ -1,25 +1,15 @@
-
-"use client"
+"use client";
 import React from "react";
 import FoodItem from "../components/foodItem";
 import { noto_sans_jp } from "../fonts";
 import { useState } from "react";
 import FoodButton from "../components/foodButton";
 
-
 const FoodPage = () => {
-  const [selectedFoodCategories, setSelectedFoodCategories] = useState<string[]>([
-    "Wifi有",
-    "充電有",
-    "カフェ",
-    "入りやすい"
-  ]);
-  const foodButtonNames = [
-    "Wifi有",
-    "充電有",
-    "カフェ",
-    "入りやすい"
-  ];
+  const [selectedFoodCategories, setSelectedFoodCategories] = useState<
+    string[]
+  >(["Wifi有", "充電有", "カフェ", "入りやすい"]);
+  const foodButtonNames = ["Wifi有", "充電有", "カフェ", "入りやすい"];
   const clickSouvenirCategory = (categoryName: string) => {
     const index = selectedFoodCategories.indexOf(categoryName);
 

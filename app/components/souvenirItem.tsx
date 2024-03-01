@@ -4,9 +4,9 @@ import { noto_sans_jp } from "../fonts";
 const souvenirItem: React.FC<SouvenirItemProps> = ({ name, company }) => {
   return (
     <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
-      <div className="p-6 rounded-lg">
+      <div className="p-2 rounded-lg">
         <img
-          className="h-48 rounded-xl w-full object-cover object-center mb-4"
+          className="rounded-xl w-full object-cover object-center mb-4"
           src="https://i.gyazo.com/29463dd3092c3858e4aa56c9549b4305.jpg"
           alt="写真"
         />

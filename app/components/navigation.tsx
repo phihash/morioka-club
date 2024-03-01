@@ -22,7 +22,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, clickTab }) => {
             onClick={clickTab}
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${activeTab == "tour" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            旅行
+            観光
           </div>
         </Link>
         <Link href="/souvenir">
@@ -59,6 +59,15 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, clickTab }) => {
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "toilet" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
             トイレ
+          </div>
+        </Link>
+        <Link href="/diary">
+          <div
+            data-tab="diary"
+            onClick={clickTab}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "diary" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+          >
+            体験記
           </div>
         </Link>
       </div>

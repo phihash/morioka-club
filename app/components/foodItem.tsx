@@ -1,13 +1,22 @@
 import React from "react";
-import { noto_sans_jp } from "../fonts";
+import { noto_sans_jp ,zen_maru_gothic  } from "../fonts";
+import { FaInstagram } from "react-icons/fa6";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
-const foodItem: React.FC<FoodItemProps> = ({ dish, restaurant }) => {
+const foodItem: React.FC<FoodItemProps> = ({
+  dish,
+  restaurant,
+  url,
+  comment,
+  instagram,
+  link
+}) => {
   return (
     <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
       <div className="p-2 rounded-lg">
         <img
           className="h-64 rounded-xl w-full object-cover object-center mb-4"
-          src="https://i.gyazo.com/922ce9c413bd81f9a5b152fa94e613fb.jpg"
+          src={url}
           alt="写真"
         />
         <h3
@@ -15,16 +24,23 @@ const foodItem: React.FC<FoodItemProps> = ({ dish, restaurant }) => {
         >
           {restaurant}
         </h3>
+
         <h2
-          className={`${noto_sans_jp.className}  text-xl text-gray-900 font-semibold title-font mb-0.5`}
+          className={`${noto_sans_jp.className}  text-xl text-gray-900 font-semibold title-font mb-1`}
         >
           {dish}
         </h2>
+
         <p
-          className={`${noto_sans_jp.className}  leading-relaxed text-gray-700 text-base`}
+          className={`${zen_maru_gothic .className}  leading-relaxed text-gray-600 text-base`}
         >
-          素朴な味で美味しい
+          {comment}
         </p>
+      <div className=" flex justify-end gap-4 mt-5">
+      {link ? <FaExternalLinkAlt size="30px" /> : ""}
+      {instagram ? <FaInstagram size="32px" /> : ""}
+      </div>
+
       </div>
     </div>
   );
@@ -33,6 +49,10 @@ const foodItem: React.FC<FoodItemProps> = ({ dish, restaurant }) => {
 interface FoodItemProps {
   dish: string;
   restaurant: string;
+  url: string;
+  comment: string;
+  instagram: string;
+  link:string;
 }
 
 export default foodItem;

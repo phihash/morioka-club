@@ -3,7 +3,8 @@ import TopPageText from "./components/topPageText";
 
 export default function Home() {
   return (
-    <div className="bg-green-50 pb-24">
+    <div className="bg-green-700">
+<div className="bg-white rounded-b-3xl  pb-24">
       {/* pb-24でした */}
       <div className="py-24">
         <p
@@ -19,7 +20,7 @@ export default function Home() {
       </div>
 
       <div
-        className={`md:w-3/4 w-10/12 mx-auto ${noto_sans_jp.className} bg-white rounded-xl`}
+        className={`md:w-3/4 w-10/12 mx-auto ${noto_sans_jp.className}`}
       >
         <TopPageText
           title="このサイトについて"
@@ -47,5 +48,7 @@ export default function Home() {
         />
       </div>
     </div>
+    </div>
+
   );
 }

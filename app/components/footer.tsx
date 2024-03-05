@@ -12,18 +12,21 @@ export default function Footer() {
   //   }
   // };
   return (
-    <header>
-      <div className="w-11/12 mx-auto">
+    <footer>
+      <div className="bg-green-700">
+      <div className="w-11/12 mx-auto h-40">
         <Link href="/">
           <div
             data-tab="top"
             // onClick={clickTab}
-            className={`${zen_maru_gothic.className} my-6 text-2xl font-bold w-max text-green-700  px-3 py-2 text-center tracking-wider`}
+            className={`${zen_maru_gothic.className}  text-2xl font-bold w-max text-white px-3 py-10 text-center tracking-wider`}
           >
             もりおかガイド
           </div>
         </Link>
       </div>
-    </header>
+      </div>
+
+    </footer>
   );
 }

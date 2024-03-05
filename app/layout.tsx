@@ -6,11 +6,11 @@ import Header from "./components/header";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "盛岡かんたんガイド",
-  description: "盛岡かんたんガイド",
+  title: "もりおかガイド",
+  description: "もりおかガイド",
   openGraph: {
-    title: "盛岡かんたんガイド",
-    description: "盛岡簡単ガイドLINE",
+    title: "もりおかガイド",
+    description: "もりおかガイド",
     locale: "ja_JP",
     type: "website",
   },

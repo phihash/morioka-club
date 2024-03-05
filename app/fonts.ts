@@ -19,7 +19,7 @@ export const kiwi_maru = Kiwi_Maru({
 export const zen_maru_gothic = Zen_Maru_Gothic({
   subsets: ['latin'],
   display: 'swap',
-  weight:["400"]
+  weight:["700"]
 })
 
 export const noto_sans_jp = Noto_Sans_JP({

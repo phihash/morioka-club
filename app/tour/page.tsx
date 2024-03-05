@@ -29,7 +29,7 @@ const TourPage = () => {
           </p>
         </div>
       </div>
-{/* くぎり */}
+      {/* くぎり */}
       <div className="mt-20 flex flex-col-reverse md:flex-row">
         <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
           <h2
@@ -46,13 +46,14 @@ const TourPage = () => {
           </p>
         </div>
         <div className="md:w-1/2">
-         <img
+          <img
             className="rounded-xl w-full  mb-4"
-
-         src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"  alt="写真" width="2663"/>
+            src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
+            alt="写真"
+            width="2663"
+          />
         </div>
       </div>
-
     </div>
   );
 };

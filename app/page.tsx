@@ -14,7 +14,7 @@ export default function Home() {
         <h1
           className={`md:text-4xl text-3xl font-semibold ${noto_sans_jp.className} w-max mx-auto `}
         >
-          盛岡かんたんガイド
+          もりおか ガイド
         </h1>
       </div>
 

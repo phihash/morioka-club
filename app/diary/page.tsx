@@ -1,7 +1,6 @@
 import React from "react";
 import { noto_sans_jp } from "../fonts";
 
-
 const DiaryPage = () => {
   return (
     <div className="bg-green-50 pb-24">
@@ -21,9 +20,7 @@ const DiaryPage = () => {
 
       <div
         className={`md:w-3/4 w-10/12 mx-auto ${noto_sans_jp.className} bg-white rounded-xl`}
-      >
-
-      </div>
+      ></div>
     </div>
   );
 };

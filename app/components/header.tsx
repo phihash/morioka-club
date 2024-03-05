@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { fredoka } from "../fonts";
+import { zen_maru_gothic } from "../fonts";
 import Navigation from "./navigation";
 import { useState } from "react";
 
@@ -19,9 +19,9 @@ export default function Header() {
           <div
             data-tab="top"
             onClick={clickTab}
-            className={`${fredoka.className} my-6 text-xl font-semibold  bg-green-600 text-stone-100 px-3 py-1 rounded-lg w-32 text-center tracking-wider`}
+            className={`${zen_maru_gothic.className} my-6 text-2xl font-bold w-max text-green-700  px-3 py-2 rounded-lg w-32 text-center tracking-wider`}
           >
-            M-Guide
+            もりおかガイド
           </div>
         </Link>
 

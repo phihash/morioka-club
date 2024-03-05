@@ -16,15 +16,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, clickTab }) => {
             食べ物
           </div>
         </Link>
-        <Link href="/tour">
-          <div
-            data-tab="tour"
-            onClick={clickTab}
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${activeTab == "tour" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
-          >
-            観光
-          </div>
-        </Link>
+
         <Link href="/souvenir">
           <div
             data-tab="souvenir"
@@ -34,13 +26,22 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, clickTab }) => {
             おみやげ
           </div>
         </Link>
-        <Link href="/culture">
+        <Link href="/tour">
           <div
-            data-tab="culture"
+            data-tab="tour"
             onClick={clickTab}
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "culture" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${activeTab == "tour" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            文化
+            観光
+          </div>
+        </Link>
+        <Link href="/facility">
+          <div
+            data-tab="facility"
+            onClick={clickTab}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "facility" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+          >
+            商業施設
           </div>
         </Link>
         <Link href="/diary">

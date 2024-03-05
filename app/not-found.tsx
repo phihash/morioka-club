@@ -1,4 +1,4 @@
-import { noto_sans_jp} from "./fonts";
+import { noto_sans_jp } from "./fonts";
 
 function NotFoundPage() {
   return (
@@ -18,19 +18,17 @@ function NotFoundPage() {
         <p
           className={`text-base ${noto_sans_jp.className} font-semibold mb-8 md:text-center tracking-widest leading-7`}
         >
-          こちらのサイトをご利用いただき、ありがとうございます。<br/>
-お探しのページは元から存在しないか、あるいは現在利用できない可能性があります。<br/>
-
+          こちらのサイトをご利用いただき、ありがとうございます。
+          <br />
+          お探しのページは元から存在しないか、あるいは現在利用できない可能性があります。
+          <br />
         </p>
         <p
           className={`text-base ${noto_sans_jp.className} font-semibold mb-6 md:text-center tracking-widest`}
-          >
-        お手数ですが、トップページから再度お探しくださいますよう、お願いいたします。
-
+        >
+          お手数ですが、トップページから再度お探しくださいますよう、お願いいたします。
         </p>
       </div>
-
-
     </div>
   );
 }

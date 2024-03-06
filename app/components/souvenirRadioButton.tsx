@@ -1,14 +1,17 @@
 import React from "react";
 import { noto_sans_jp } from "../fonts";
 
-const foodRadioButton: React.FC<FoodRadioButtonProps> = ({ name, onClick }) => {
+const souvenirRadioButton: React.FC<SouvenirRadioButtonProps> = ({
+  name,
+  onClick,
+}) => {
   return (
     <div className="flex items-center cursor-pointer" onClick={onClick}>
       <input
         id={name}
         type="radio"
         value={name}
-        name="food-sort"
+        name="souvenir-sort"
         className="appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-emerald-500 checked:border-lime-500 focus:outline-none cursor-pointer"
       />
       <label
@@ -21,9 +24,9 @@ const foodRadioButton: React.FC<FoodRadioButtonProps> = ({ name, onClick }) => {
   );
 };
 
-interface FoodRadioButtonProps {
+interface SouvenirRadioButtonProps {
   name: string;
   onClick: () => void;
 }
 
-export default foodRadioButton;
+export default souvenirRadioButton;

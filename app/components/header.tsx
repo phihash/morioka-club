@@ -21,7 +21,7 @@ export default function Header() {
             onClick={clickTab}
             className={`${zen_maru_gothic.className} my-6 text-2xl font-bold w-max text-green-700  px-3 py-2 rounded-lg w-32 text-center tracking-wider`}
           >
-            もりおかガイド
+            もりおかクラブ
           </div>
         </Link>
 
@@ -34,5 +34,3 @@ export default function Header() {
     </header>
   );
 }
-
-

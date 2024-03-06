@@ -4,6 +4,7 @@ import SouvenirButton from "../components/souvenirButton";
 import { useState } from "react";
 import { noto_sans_jp } from "../fonts";
 import SouvenirItem from "../components/souvenirItem";
+import SouvenirRadioButton from "../components/souvenirRadioButton";
 
 const SouvenirPage = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([
@@ -27,27 +28,88 @@ const SouvenirPage = () => {
     "家族・友人用",
   ];
   const [souvenirItems, setSouvenirItems] = useState([
-    { name: "南部せんべい", categories: ["個包装", "日持ちする"], company: "" },
-    { name: "盛岡冷麺", categories: ["日持ちする"], company: "ぴょんぴょん舎" },
+    {
+      name: "南部せんべい",
+      categories: ["個包装", "日持ちする"],
+      company: "",
+      price: 1458,
+      recommendation: 2,
+    },
+    {
+      name: "盛岡冷麺",
+      categories: ["日持ちする"],
+      company: "ぴょんぴょん舎",
+      price: 1458,
+      recommendation: 2,
+    },
     {
       name: "岩手のはちみつ ラングドシャ",
       categories: ["甘い"],
       company: "山本養蜂場",
+      price: 1458,
+      recommendation: 4,
     },
-    { name: "三陸えびせんべい", categories: ["スナック系"], company: "" },
+    {
+      name: "三陸えびせんべい",
+      categories: ["スナック系"],
+      company: "",
+      price: 1458,
+      recommendation: 3,
+    },
     {
       name: "かもめのたまご",
       categories: ["あんこ", "甘い"],
       company: "さいとう製菓",
+      price: 1458,
+      recommendation: 3,
     },
-    { name: "ごま摺り団子", categories: ["あんこ"], company: "" },
-    { name: "Cava（サヴァ）缶", categories: ["日持ちする"], company: "" },
+    {
+      name: "ごま摺り団子",
+      categories: ["あんこ"],
+      company: "",
+      price: 1458,
+      recommendation: 3,
+    },
+    {
+      name: "Cava（サヴァ）缶",
+      categories: ["日持ちする"],
+      company: "",
+      price: 1458,
+      recommendation: 3,
+    },
     {
       name: "Cava（サヴァ）缶",
       categories: ["日持ちする"],
       company: "小山製麺",
+      price: 1458,
+      recommendation: 2,
     },
   ]);
+
+  const [sortBy, setSortBy] = useState("");
+  const handleSortByLowPrice = () => {
+    setSortBy("Low");
+    const sortedItems = [...souvenirItems].sort((a, b) =>
+      sortBy == "Low" ? a.price - b.price : b.price - a.price,
+    );
+    setSouvenirItems(sortedItems);
+  };
+  const handleSortByHighPrice = () => {
+    setSortBy("High");
+    const sortedItems = [...souvenirItems].sort((a, b) =>
+      sortBy == "High" ? b.price - a.price : a.price - b.price,
+    );
+    setSouvenirItems(sortedItems);
+  };
+  const handleSortByRecommendation = () => {
+    setSortBy("Recommendation");
+    const sortedItems = [...souvenirItems].sort((a, b) =>
+      sortBy == "Recommendation"
+        ? b.recommendation - a.recommendation
+        : a.recommendation - b.recommendation,
+    );
+    setSouvenirItems(sortedItems);
+  };
   const clickSouvenirCategory = (categoryName: string) => {
     const index = selectedCategories.indexOf(categoryName);
 
@@ -61,10 +123,10 @@ const SouvenirPage = () => {
   };
   return (
     <div className="w-11/12 mx-auto">
-      <h3 className={`${noto_sans_jp.className} font-semibold mt-6 ml-1`}>
+      <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
         カテゴリ
       </h3>
-      <div className="flex flex-wrap gap-1.5 mt-6">
+      <div className="px-3 flex flex-wrap gap-1.5 mt-6">
         {souvenirButtonNames.map((souvenirButtonName, index) => {
           return (
             <SouvenirButton
@@ -76,7 +138,25 @@ const SouvenirPage = () => {
           );
         })}
       </div>
-      <div className="flex flex-wrap mt-4">
+
+      <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
+        ソート
+      </h3>
+      <div className="px-3 flex flex-wrap gap-4 mt-6">
+        <SouvenirRadioButton
+          name="高い順"
+          onClick={handleSortByHighPrice}
+        ></SouvenirRadioButton>
+        <SouvenirRadioButton
+          name="安い順"
+          onClick={handleSortByLowPrice}
+        ></SouvenirRadioButton>
+        <SouvenirRadioButton
+          name="おすすめ順"
+          onClick={handleSortByRecommendation}
+        ></SouvenirRadioButton>
+      </div>
+      <div className="px-3 flex flex-wrap mt-4">
         {/* アイテムエリア */}
         {souvenirItems.map((item, index) => {
           if (

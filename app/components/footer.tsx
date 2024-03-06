@@ -14,19 +14,18 @@ export default function Footer() {
   return (
     <footer>
       <div className="bg-green-700">
-      <div className="w-11/12 mx-auto h-40">
-        <Link href="/">
-          <div
-            data-tab="top"
-            // onClick={clickTab}
-            className={`${zen_maru_gothic.className}  text-2xl font-bold w-max text-white px-3 py-10 text-center tracking-wider`}
-          >
-            もりおかガイド
-          </div>
-        </Link>
+        <div className="w-11/12 mx-auto h-40">
+          <Link href="/">
+            <div
+              data-tab="top"
+              // onClick={clickTab}
+              className={`${zen_maru_gothic.className}  text-2xl font-bold w-max text-white px-3 py-10 text-center tracking-wider`}
+            >
+              もりおかクラブ
+            </div>
+          </Link>
+        </div>
       </div>
-      </div>
-
     </footer>
   );
 }

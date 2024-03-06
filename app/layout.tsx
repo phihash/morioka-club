@@ -7,13 +7,23 @@ import Footer from "./components/footer";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://morioka.club'),
   title: "もりおかクラブ",
-  description: "もりおかクラブ",
+  description: "もりおかクラブは、盛岡に転勤・出張が決まった方や観光に来る方が、事前に盛岡に関する情報を知ることができるサイトです。このサイトを見ることで盛岡を大まかに知ることができます！",
   openGraph: {
     title: "もりおかクラブ",
-    description: "もりおかクラブ",
+    description: "もりおかクラブは、盛岡に転勤・出張が決まった方や観光に来る方が、事前に盛岡に関する情報を知ることができるサイトです。このサイトを見ることで盛岡を大まかに知ることができます！",
+    url:"https://morioka.club",
+    siteName: "もりおかクラブ",
     locale: "ja_JP",
     type: "website",
+    images: [
+      {
+        url: 'https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg', // Must be an absolute URL
+      },
+    ]
+
+
   },
   twitter: {
     card: "summary_large_image",

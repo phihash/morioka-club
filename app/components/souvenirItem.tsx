@@ -1,5 +1,5 @@
 import React from "react";
-import { noto_sans_jp } from "../fonts";
+import { noto_sans_jp ,zen_maru_gothic  } from "../fonts";
 
 const souvenirItem: React.FC<SouvenirItemProps> = ({
   name,
@@ -25,7 +25,7 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
           {name}
         </h2>
         <p
-          className={`${noto_sans_jp.className}  leading-relaxed text-gray-700 text-base`}
+          className={`${zen_maru_gothic.className}  leading-relaxed text-gray-700 text-base`}
         >
           {comment}
         </p>

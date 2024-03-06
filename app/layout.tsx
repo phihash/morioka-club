@@ -7,11 +7,11 @@ import Footer from "./components/footer";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "もりおかガイド",
-  description: "もりおかガイド",
+  title: "もりおかクラブ",
+  description: "もりおかクラブ",
   openGraph: {
-    title: "もりおかガイド",
-    description: "もりおかガイド",
+    title: "もりおかクラブ",
+    description: "もりおかクラブ",
     locale: "ja_JP",
     type: "website",
   },

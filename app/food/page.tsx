@@ -6,7 +6,6 @@ import { useState } from "react";
 import FoodButton from "../components/foodButton";
 import FoodRadioButton from "../components/foodRadioButton";
 
-
 const FoodPage = () => {
   const [selectedFoodCategories, setSelectedFoodCategories] = useState<
     string[]
@@ -29,7 +28,8 @@ const FoodPage = () => {
       comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
       instagram: "https://www.instagram.com/trentahonbu/",
       link: "https://www.trenta.co.jp/",
-      price:1380
+      price: 1380,
+      recommendation: 3,
     },
     {
       dish: "じゃじゃ麺(小盛)",
@@ -40,8 +40,8 @@ const FoodPage = () => {
         "味付け自体は薄いため、肉みそ・酢・にんにく・ラー油を用いて自分好みの味を見つけましょう。",
       instagram: "",
       link: "https://www.pairon.iwate.jp/",
-      price:450
-
+      price: 450,
+      recommendation: 2,
     },
     {
       dish: "ランチセットパスタ",
@@ -51,8 +51,8 @@ const FoodPage = () => {
       comment: "コメント",
       instagram: "https://www.instagram.com/gingado1890/",
       link: "",
-      price:1450
-
+      price: 1450,
+      recommendation: 4,
     },
     {
       dish: "わらじかつ定食",
@@ -63,8 +63,8 @@ const FoodPage = () => {
         "1頭の豚から2枚しか取れない岩手県産の厳選された肉を使用した「とんかつ定食」",
       instagram: "https://www.instagram.com/mura_hachi/",
       link: "",
-      price:2068
-
+      price: 2068,
+      recommendation: 4,
     },
     {
       dish: "紅茶",
@@ -74,19 +74,20 @@ const FoodPage = () => {
       comment: "コメント",
       instagram: "https://www.instagram.com/nagahamacoffee_moriokanishi/",
       link: "http://www.ncafe.co.jp/",
-      price:900
-
+      price: 900,
+      recommendation: 4,
     },
     {
       dish: "季節のタルト",
-      categories: ["カフェ","充電有"],
+      categories: ["カフェ", "充電有"],
       restaurant: "Cafe Bar West38",
       url: "https://i.gyazo.com/dc9ac3e7d893ebc32f1a5cdc033fbdec.jpg",
       comment:
         "さつまいもを使用した季節のタルトとアイスティーのセット。季節のタルト定期的に変わります。",
       instagram: "https://www.instagram.com/p/CjQX4wMNd3w/",
       link: "",
-      price:1100
+      price: 1100,
+      recommendation: 3,
     },
     {
       dish: "寿司",
@@ -96,30 +97,44 @@ const FoodPage = () => {
       comment: "フェザン店のランチメニュー「日替わり 大漁12貫ランチ」",
       instagram: "",
       link: "http://seijiro.jp/",
-      price:2178
-
+      price: 2178,
+      recommendation: 5,
     },
     {
       dish: "海鮮ちらし",
       categories: ["和食", "海鮮"],
       restaurant: "磯乃",
       url: "https://i.gyazo.com/29463dd3092c3858e4aa56c9549b4305.jpg",
-      comment: "新鮮な魚介が美味しい海鮮ちらし、とびっこのぷちぷちした食感がたまりません。",
+      comment:
+        "新鮮な魚介が美味しい海鮮ちらし、とびっこのぷちぷちした食感がたまりません。",
       instagram: "",
       link: "https://hideyoshi-inc.com/isono/",
-      price:1298
-
+      price: 1298,
+      recommendation: 4,
     },
   ]);
   const [sortBy, setSortBy] = useState("");
   const handleSortByLowPrice = () => {
     setSortBy("Low");
-    const sortedItems = [...foodItems].sort((a, b) => (sortBy == "Low" ? a.price - b.price : b.price - a.price));
+    const sortedItems = [...foodItems].sort((a, b) =>
+      sortBy == "Low" ? a.price - b.price : b.price - a.price,
+    );
     setFoodItems(sortedItems);
   };
   const handleSortByHighPrice = () => {
     setSortBy("High");
-    const sortedItems = [...foodItems].sort((a, b) => (sortBy == "High" ? b.price - a.price : a.price - b.price));
+    const sortedItems = [...foodItems].sort((a, b) =>
+      sortBy == "High" ? b.price - a.price : a.price - b.price,
+    );
+    setFoodItems(sortedItems);
+  };
+  const handleSortByRecommendation = () => {
+    setSortBy("Recommendation");
+    const sortedItems = [...foodItems].sort((a, b) =>
+      sortBy == "Recommendation"
+        ? b.recommendation - a.recommendation
+        : a.recommendation - b.recommendation,
+    );
     setFoodItems(sortedItems);
   };
   const clickFoodCategory = (categoryName: string) => {
@@ -155,9 +170,15 @@ const FoodPage = () => {
         ソート
       </h3>
       <div className=" px-3 flex flex-wrap gap-4 mt-6">
-        <FoodRadioButton onClick={() => handleSortByHighPrice() } name="高い順" />
-        <FoodRadioButton onClick={() => handleSortByLowPrice() } name="安い順" />
-        {/* <FoodRadioButton onClick={() => handleSortByPrice() } name="おすすめ順" /> */}
+        <FoodRadioButton
+          onClick={() => handleSortByHighPrice()}
+          name="高い順"
+        />
+        <FoodRadioButton onClick={() => handleSortByLowPrice()} name="安い順" />
+        <FoodRadioButton
+          onClick={() => handleSortByRecommendation()}
+          name="おすすめ順"
+        />
       </div>
 
       <div className="flex flex-wrap mt-4">

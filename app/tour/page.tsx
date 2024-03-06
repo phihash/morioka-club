@@ -79,8 +79,8 @@ const TourPage = () => {
           </p>
         </div>
       </div>
-       {/* くぎり */}
-       <div className="mt-20 flex flex-col-reverse md:flex-row">
+      {/* くぎり */}
+      <div className="mt-20 flex flex-col-reverse md:flex-row">
         <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
           <h2
             className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
@@ -129,14 +129,13 @@ const TourPage = () => {
           </p>
         </div>
       </div>
-       {/* くぎり */}
-       <div className="mt-20 flex flex-col-reverse md:flex-row">
+      {/* くぎり */}
+      <div className="mt-20 flex flex-col-reverse md:flex-row">
         <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
           <h2
             className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
           >
             岩手県立美術館
-
           </h2>
           <p
             className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
@@ -205,8 +204,8 @@ const TourPage = () => {
           />
         </div>
       </div>
-       {/* くぎり */}
-       <div className="mt-10 md:flex">
+      {/* くぎり */}
+      <div className="mt-10 md:flex">
         {/* でかいサイズは写真半分に */}
         <div className="md:w-1/2">
           <img

@@ -1,7 +1,7 @@
 import React from "react";
 import { noto_sans_jp } from "../fonts";
 
-const foodRadioButton: React.FC<FoodRadioButtonProps> = ({ name , onClick }) => {
+const foodRadioButton: React.FC<FoodRadioButtonProps> = ({ name, onClick }) => {
   return (
     <div className="flex items-center cursor-pointer" onClick={onClick}>
       <input
@@ -13,7 +13,7 @@ const foodRadioButton: React.FC<FoodRadioButtonProps> = ({ name , onClick }) => 
       />
       <label
         htmlFor={name}
-        className={`${noto_sans_jp.className} ml-2 text-sm font-medium text-gray-900 cursor-pointer`}
+        className={`${noto_sans_jp.className} ml-2 text-base font-medium text-gray-900 cursor-pointer`}
       >
         {name}
       </label>

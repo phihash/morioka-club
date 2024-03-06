@@ -101,8 +101,8 @@ const FacilityPage = () => {
           />
         </div>
       </div>
-            {/* くぎり */}
-            <div className="mt-10 md:flex">
+      {/* くぎり */}
+      <div className="mt-10 md:flex">
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
@@ -124,7 +124,6 @@ const FacilityPage = () => {
           </p>
         </div>
       </div>
-
     </div>
   );
 };

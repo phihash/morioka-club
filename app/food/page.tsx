@@ -19,6 +19,13 @@ const FoodPage = () => {
     "洋食",
     "海鮮",
   ];
+  const handleAllFoodCategory = () => {
+    if(!selectedFoodCategories.length){
+      setSelectedFoodCategories(foodButtonNames)
+    }else{
+      setSelectedFoodCategories([]);
+    }
+  }
   const [foodItems, setFoodItems] = useState([
     {
       dish: "牡蠣ときのこのバター醤油パスタ",
@@ -149,61 +156,73 @@ const FoodPage = () => {
     }
   };
   return (
-    <div className="w-11/12 mx-auto pb-8">
-      <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6`}>
-        カテゴリ
-      </h3>
-      <div className="px-3 flex flex-wrap gap-1.5 mt-6">
-        {foodButtonNames.map((foodButtonName, index) => {
-          return (
+    <div className="bg-green-700 ">
+      <div className="bg-white rounded-b-3xl">
+        <div className="w-11/12 mx-auto pb-8">
+          <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6`}>
+            カテゴリ
+          </h3>
+          <div className="px-3 flex flex-wrap gap-1.5 mt-6">
             <FoodButton
-              key={index}
-              onClick={() => clickFoodCategory(foodButtonName)}
-              name={foodButtonName}
-              selected={selectedFoodCategories.includes(foodButtonName)}
+            onClick={handleAllFoodCategory}
+            name="All"
+            selected={Boolean(selectedFoodCategories.length == foodButtonNames.length)} // カテゴリ全選択じゃないと色つけさせないようにするため
             />
-          );
-        })}
-      </div>
+            {foodButtonNames.map((foodButtonName, index) => {
+              return (
+                <FoodButton
+                  key={index}
+                  onClick={() => clickFoodCategory(foodButtonName)}
+                  name={foodButtonName}
+                  selected={selectedFoodCategories.includes(foodButtonName)}
+                />
+              );
+            })}
+          </div>
 
-      <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
-        ソート
-      </h3>
-      <div className=" px-3 flex flex-wrap gap-4 mt-6">
-        <FoodRadioButton
-          onClick={() => handleSortByHighPrice()}
-          name="高い順"
-        />
-        <FoodRadioButton onClick={() => handleSortByLowPrice()} name="安い順" />
-        <FoodRadioButton
-          onClick={() => handleSortByRecommendation()}
-          name="おすすめ順"
-        />
-      </div>
+          <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
+            ソート
+          </h3>
+          <div className=" px-3 flex flex-wrap gap-4 mt-6">
+            <FoodRadioButton
+              onClick={() => handleSortByHighPrice()}
+              name="高い順"
+            />
+            <FoodRadioButton
+              onClick={() => handleSortByLowPrice()}
+              name="安い順"
+            />
+            <FoodRadioButton
+              onClick={() => handleSortByRecommendation()}
+              name="おすすめ順"
+            />
+          </div>
 
-      <div className="flex flex-wrap mt-4">
-        {/* アイテムエリア */}
-        {foodItems.map((item, index) => {
-          if (
-            selectedFoodCategories.some((category) =>
-              item.categories.includes(category),
-            )
-          ) {
-            return (
-              <FoodItem
-                key={index}
-                dish={item.dish}
-                restaurant={item.restaurant}
-                comment={item.comment}
-                url={item.url}
-                instagram={item.instagram}
-                link={item.link}
-                price={item.price}
-              ></FoodItem>
-            );
-          }
-          return null;
-        })}
+          <div className="flex flex-wrap mt-4">
+            {/* アイテムエリア */}
+            {foodItems.map((item, index) => {
+              if (
+                selectedFoodCategories.some((category) =>
+                  item.categories.includes(category),
+                )
+              ) {
+                return (
+                  <FoodItem
+                    key={index}
+                    dish={item.dish}
+                    restaurant={item.restaurant}
+                    comment={item.comment}
+                    url={item.url}
+                    instagram={item.instagram}
+                    link={item.link}
+                    price={item.price}
+                  ></FoodItem>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

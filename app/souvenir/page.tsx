@@ -32,6 +32,7 @@ const SouvenirPage = () => {
       name: "南部せんべい",
       categories: ["個包装", "日持ちする"],
       company: "",
+      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
       price: 1458,
       recommendation: 2,
     },
@@ -39,20 +40,26 @@ const SouvenirPage = () => {
       name: "盛岡冷麺",
       categories: ["日持ちする"],
       company: "ぴょんぴょん舎",
+      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
+
       price: 1458,
       recommendation: 2,
     },
     {
-      name: "岩手のはちみつ ラングドシャ",
+      name: "岩手のはちみつ ラングドシャ10個入",
       categories: ["甘い"],
       company: "山本養蜂場",
-      price: 1458,
+      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
+
+      price: 756,
       recommendation: 4,
     },
     {
       name: "三陸えびせんべい",
       categories: ["スナック系"],
       company: "",
+      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
+
       price: 1458,
       recommendation: 3,
     },
@@ -60,6 +67,8 @@ const SouvenirPage = () => {
       name: "かもめのたまご",
       categories: ["あんこ", "甘い"],
       company: "さいとう製菓",
+      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
+
       price: 1458,
       recommendation: 3,
     },
@@ -67,6 +76,8 @@ const SouvenirPage = () => {
       name: "ごま摺り団子",
       categories: ["あんこ"],
       company: "",
+      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
+
       price: 1458,
       recommendation: 3,
     },
@@ -74,6 +85,8 @@ const SouvenirPage = () => {
       name: "Cava（サヴァ）缶",
       categories: ["日持ちする"],
       company: "",
+      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
+
       price: 1458,
       recommendation: 3,
     },
@@ -81,11 +94,19 @@ const SouvenirPage = () => {
       name: "Cava（サヴァ）缶",
       categories: ["日持ちする"],
       company: "小山製麺",
+      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
+
       price: 1458,
       recommendation: 2,
     },
   ]);
-
+  const handleAllSouvenirCategory = () => {
+    if(!selectedCategories.length){
+      setSelectedCategories(souvenirButtonNames)
+    }else{
+      setSelectedCategories([]);
+    }
+  }
   const [sortBy, setSortBy] = useState("");
   const handleSortByLowPrice = () => {
     setSortBy("Low");
@@ -122,11 +143,19 @@ const SouvenirPage = () => {
     }
   };
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="bg-green-700 ">
+    <div className="bg-white rounded-b-3xl">
+    <div className="w-11/12 mx-auto pb-8">
       <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
         カテゴリ
       </h3>
       <div className="px-3 flex flex-wrap gap-1.5 mt-6">
+      <SouvenirButton
+                    onClick={handleAllSouvenirCategory}
+                    name="All"
+             selected={Boolean(selectedCategories.length == souvenirButtonNames.length)} // カテゴリ全選択じゃないと色つけさせないようにするため
+
+      />
         {souvenirButtonNames.map((souvenirButtonName, index) => {
           return (
             <SouvenirButton
@@ -169,12 +198,15 @@ const SouvenirPage = () => {
                 key={index}
                 name={item.name}
                 company={item.company}
+                comment={item.comment}
               ></SouvenirItem>
             );
           }
           return null;
         })}
       </div>
+    </div>
+    </div>
     </div>
   );
 };

@@ -3,7 +3,9 @@ import { zen_maru_gothic, noto_sans_jp } from "../fonts";
 
 const SpotPage = () => {
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="bg-green-700 ">
+    <div className="bg-white rounded-b-3xl">
+    <div className="w-11/12 mx-auto pb-12">
       {/* 大枠 */}
       <div className="mt-10 md:flex">
         {/* でかいサイズは写真半分に */}
@@ -254,6 +256,8 @@ const SpotPage = () => {
           />
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 };

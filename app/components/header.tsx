@@ -9,7 +9,7 @@ export default function Header() {
       <div className="w-11/12 mx-auto">
         <Link href="/">
           <div
-            className={`${zen_maru_gothic.className} my-6 text-2xl font-bold w-max text-green-700  px-3 py-2 rounded-lg w-32 text-center tracking-wider`}
+            className={`${zen_maru_gothic.className}  text-2xl font-bold w-max text-green-700  px-3 py-8 rounded-lg w-32 text-center tracking-wider`}
           >
             もりおかクラブ
           </div>

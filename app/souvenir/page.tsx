@@ -100,7 +100,13 @@ const SouvenirPage = () => {
       recommendation: 2,
     },
   ]);
-
+  const handleAllSouvenirCategory = () => {
+    if(!selectedCategories.length){
+      setSelectedCategories(souvenirButtonNames)
+    }else{
+      setSelectedCategories([]);
+    }
+  }
   const [sortBy, setSortBy] = useState("");
   const handleSortByLowPrice = () => {
     setSortBy("Low");
@@ -137,11 +143,19 @@ const SouvenirPage = () => {
     }
   };
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="bg-green-700 ">
+    <div className="bg-white rounded-b-3xl">
+    <div className="w-11/12 mx-auto pb-8">
       <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
         カテゴリ
       </h3>
       <div className="px-3 flex flex-wrap gap-1.5 mt-6">
+      <SouvenirButton
+                    onClick={handleAllSouvenirCategory}
+                    name="All"
+             selected={Boolean(selectedCategories.length == souvenirButtonNames.length)} // カテゴリ全選択じゃないと色つけさせないようにするため
+
+      />
         {souvenirButtonNames.map((souvenirButtonName, index) => {
           return (
             <SouvenirButton
@@ -191,6 +205,8 @@ const SouvenirPage = () => {
           return null;
         })}
       </div>
+    </div>
+    </div>
     </div>
   );
 };

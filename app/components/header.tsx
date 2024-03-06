@@ -4,7 +4,6 @@ import { zen_maru_gothic } from "../fonts";
 import Navigation from "./navigation";
 
 export default function Header() {
-
   return (
     <header>
       <div className="w-11/12 mx-auto">
@@ -16,8 +15,7 @@ export default function Header() {
           </div>
         </Link>
 
-        <Navigation
-        ></Navigation>
+        <Navigation></Navigation>
       </div>
     </header>
   );

@@ -6,7 +6,7 @@ function NotFoundPage() {
       {/* pb-24でした */}
       <div className="px-8 py-16 md:w-3/4 w-10/12 mx-auto bg-white  rounded-xl">
         <p
-          className={` md:text-4xl text-3xl font-semibold ${noto_sans_jp.className} w-max mx-auto mb-12`}
+          className={` md:text-4xl text-2xl font-semibold ${noto_sans_jp.className} w-max mx-auto mb-12`}
         >
           ページが見つかりません
         </p>

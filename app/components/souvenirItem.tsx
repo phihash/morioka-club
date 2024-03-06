@@ -1,7 +1,11 @@
 import React from "react";
 import { noto_sans_jp } from "../fonts";
 
-const souvenirItem: React.FC<SouvenirItemProps> = ({ name, company }) => {
+const souvenirItem: React.FC<SouvenirItemProps> = ({
+  name,
+  company,
+  comment,
+}) => {
   return (
     <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
       <div className="p-2 rounded-lg">
@@ -23,7 +27,7 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({ name, company }) => {
         <p
           className={`${noto_sans_jp.className}  leading-relaxed text-gray-700 text-base`}
         >
-          素朴な味で美味しい
+          {comment}
         </p>
       </div>
     </div>
@@ -33,6 +37,7 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({ name, company }) => {
 interface SouvenirItemProps {
   name: string;
   company: string;
+  comment: string;
 }
 
 export default souvenirItem;

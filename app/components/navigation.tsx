@@ -2,16 +2,16 @@
 import React from "react";
 import Link from "next/link";
 import { noto_sans_jp } from "../fonts";
+import { usePathname } from "next/navigation";
 
-const Navigation: React.FC<NavigationProps> = ({ activeTab, clickTab }) => {
+const Navigation = () => {
+  const pathname = usePathname();
   return (
     <nav className="text-sm">
       <div className="flex overflow-x-auto">
         <Link href="/food">
           <div
-            data-tab="food"
-            onClick={clickTab}
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3 w-max flex-none  ${activeTab == "food" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3 w-max flex-none  ${pathname == "/food" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
             食べ物
           </div>
@@ -19,36 +19,35 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, clickTab }) => {
 
         <Link href="/souvenir">
           <div
-            data-tab="souvenir"
-            onClick={clickTab}
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${activeTab == "souvenir" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${pathname == "/souvenir" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
             おみやげ
           </div>
         </Link>
-        <Link href="/tour">
+        <Link href="/spot">
           <div
-            data-tab="tour"
-            onClick={clickTab}
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${activeTab == "tour" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${pathname == "/spot" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            観光
+            観光スポット
+          </div>
+        </Link>
+        <Link href="/event">
+          <div
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${pathname == "/event" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+          >
+            イベント
           </div>
         </Link>
         <Link href="/facility">
           <div
-            data-tab="facility"
-            onClick={clickTab}
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "facility" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${pathname == "/facility" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
             商業施設
           </div>
         </Link>
         <Link href="/diary">
           <div
-            data-tab="diary"
-            onClick={clickTab}
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${activeTab == "diary" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none ${pathname == "/diary" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
             体験記
           </div>
@@ -58,10 +57,5 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, clickTab }) => {
   );
 };
 
-interface NavigationProps {
-  clickTab: (e: React.MouseEvent<HTMLDivElement>) => void;
-  activeTab: string;
-  setActiveTab: React.Dispatch<React.SetStateAction<string>>;
-}
 
 export default Navigation;

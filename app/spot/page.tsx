@@ -1,7 +1,7 @@
 import React from "react";
 import { zen_maru_gothic, noto_sans_jp } from "../fonts";
 
-const TourPage = () => {
+const SpotPage = () => {
   return (
     <div className="w-11/12 mx-auto">
       {/* 大枠 */}
@@ -258,4 +258,4 @@ const TourPage = () => {
   );
 };
 
-export default TourPage;
+export default SpotPage;

@@ -24,9 +24,9 @@ const Navigation = () => {
             おみやげ
           </div>
         </Link>
-        <Link href="/tour">
+        <Link href="/spot">
           <div
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${pathname == "/tour" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex-none  ${pathname == "/spot" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
             観光スポット
           </div>

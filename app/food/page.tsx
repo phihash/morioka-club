@@ -2,14 +2,15 @@
 import React from "react";
 import FoodItem from "../components/foodItem";
 import { noto_sans_jp } from "../fonts";
-import { useState } from "react";
+import { useState , memo } from "react";
 import FoodButton from "../components/foodButton";
 import FoodRadioButton from "../components/foodRadioButton";
 
-const FoodPage = () => {
+// eslint-disable-next-line react/display-name
+const FoodPage = memo(() => {
   const [selectedFoodCategories, setSelectedFoodCategories] = useState<
     string[]
-  >(["Wifi有", "充電有", "カフェ", "入りやすい", "和食", "洋食", "海鮮"]);
+  >(["Wifi有", "充電有", "カフェ", "入りやすい", "和食", "洋食", "海鮮","スイーツ"]);
   const foodButtonNames = [
     "Wifi有",
     "充電有",
@@ -18,6 +19,7 @@ const FoodPage = () => {
     "和食",
     "洋食",
     "海鮮",
+    "スイーツ"
   ];
   const handleAllFoodCategory = () => {
     if(!selectedFoodCategories.length){
@@ -74,6 +76,18 @@ const FoodPage = () => {
       recommendation: 4,
     },
     {
+      dish: "京抹茶プリン (1個)",
+      categories: ["スイーツ"],
+      restaurant: "私のプリン 桜",
+      url: "https://i.gyazo.com/e7d416b9ecf5c1071425aa290e353c18.jpg",
+      comment:
+        "大阪発のプリン専門店、盛岡は東北第一号店！一般的なプリンと異なりムースのような食感でした。",
+      instagram: "https://www.instagram.com/watashinopurin/",
+      link: "https://watashinopurin.com/",
+      price: 660,
+      recommendation: 5,
+    },
+    {
       dish: "紅茶",
       categories: ["カフェ", "Wifi有", "充電有"],
       restaurant: "ナガハマコーヒー",
@@ -92,7 +106,7 @@ const FoodPage = () => {
       comment:
         "さつまいもを使用した季節のタルトとアイスティーのセット。季節のタルト定期的に変わります。",
       instagram: "https://www.instagram.com/p/CjQX4wMNd3w/",
-      link: "",
+      link: "https://akiyoshi-jazz.com/west38/",
       price: 1100,
       recommendation: 3,
     },
@@ -106,6 +120,17 @@ const FoodPage = () => {
       link: "http://seijiro.jp/",
       price: 2178,
       recommendation: 5,
+    },
+    {
+      dish: "わらびもち(5個)",
+      categories: ["スイーツ"],
+      restaurant: "甘味処鎌倉",
+      url: "https://i.gyazo.com/bf6a42b53622fff047431bceb90e50ae.jpg",
+      comment: "わらびドリンクも美味しい。黒蜜は別売り(120円)でした",
+      instagram: "https://www.instagram.com/kamakura.cafe/",
+      link: "https://www.warabimochi-kamakura.com/",
+      price: 820,
+      recommendation: 4,
     },
     {
       dish: "海鮮ちらし",
@@ -226,6 +251,6 @@ const FoodPage = () => {
       </div>
     </div>
   );
-};
+});
 
 export default FoodPage;

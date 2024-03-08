@@ -1,7 +1,9 @@
 import React from "react";
 import { noto_sans_jp } from "../fonts";
+import { memo } from "react";
 
-const foodRadioButton: React.FC<FoodRadioButtonProps> = ({ name, onClick }) => {
+// eslint-disable-next-line react/display-name
+const foodRadioButton: React.FC<FoodRadioButtonProps> = memo(({ name, onClick }) => {
   return (
     <div className="flex items-center cursor-pointer" onClick={onClick}>
       <input
@@ -19,7 +21,7 @@ const foodRadioButton: React.FC<FoodRadioButtonProps> = ({ name, onClick }) => {
       </label>
     </div>
   );
-};
+});
 
 interface FoodRadioButtonProps {
   name: string;

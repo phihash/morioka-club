@@ -3,9 +3,10 @@ import { noto_sans_jp, zen_maru_gothic } from "../fonts";
 import { FaInstagram } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
-import memo from "react";
+import { memo } from "react";
 
-const foodItem: React.FC<FoodItemProps> = ({
+// eslint-disable-next-line react/display-name
+const foodItem: React.FC<FoodItemProps> = memo(({
   dish,
   restaurant,
   url,
@@ -65,7 +66,7 @@ const foodItem: React.FC<FoodItemProps> = ({
       </div>
     </div>
   );
-};
+});
 
 interface FoodItemProps {
   dish: string;

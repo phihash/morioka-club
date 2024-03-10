@@ -12,7 +12,7 @@ const FacilityPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+            src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
             alt="写真"
           />
         </div>
@@ -49,7 +49,7 @@ const FacilityPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
+            src="https://i.gyazo.com/dc4cbdd6df2d21ef8f9eb94237163c51.png"
             alt="写真"
             width="2663"
           />
@@ -60,7 +60,7 @@ const FacilityPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+            src="https://i.gyazo.com/3bdf8089597443ec7f7429287e2888ad.png"
             alt="写真"
           />
         </div>
@@ -111,7 +111,7 @@ const FacilityPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+            src="https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png"
             alt="写真"
           />
         </div>

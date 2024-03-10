@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: 'https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg', // Must be an absolute URL
+        url: 'https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg', // Must be an absolute URL
       },
     ]
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"],
+    images: ["https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"],
   },
   icons: [
     {

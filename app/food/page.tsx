@@ -30,6 +30,18 @@ const FoodPage = memo(() => {
   }
   const [foodItems, setFoodItems] = useState([
     {
+      dish: "京抹茶プリン (1個)",
+      categories: ["スイーツ","入りやすい"],
+      restaurant: "私のプリン 桜",
+      url: "https://i.gyazo.com/e7d416b9ecf5c1071425aa290e353c18.jpg",
+      comment:
+        "大阪発のプリン専門店、盛岡は東北第一号店！一般的なプリンと異なりムースのような食感でした。",
+      instagram: "https://www.instagram.com/watashinopurin/",
+      link: "https://watashinopurin.com/",
+      price: 660,
+      recommendation: 5,
+    },
+    {
       dish: "牡蠣ときのこのバター醤油パスタ",
       categories: ["洋食"],
       restaurant: "TRENTA",
@@ -65,7 +77,7 @@ const FoodPage = memo(() => {
     },
     {
       dish: "わらじかつ定食",
-      categories: ["和食"],
+      categories: ["和食","入りやすい"],
       restaurant: "むら八",
       url: "https://i.gyazo.com/d15ae02a8a3efed7e565a7e51ee7f501.jpg",
       comment:
@@ -73,20 +85,32 @@ const FoodPage = memo(() => {
       instagram: "https://www.instagram.com/mura_hachi/",
       link: "",
       price: 2068,
-      recommendation: 4,
+      recommendation: 6,
     },
     {
-      dish: "京抹茶プリン (1個)",
-      categories: ["スイーツ"],
-      restaurant: "私のプリン 桜",
-      url: "https://i.gyazo.com/e7d416b9ecf5c1071425aa290e353c18.jpg",
-      comment:
-        "大阪発のプリン専門店、盛岡は東北第一号店！一般的なプリンと異なりムースのような食感でした。",
-      instagram: "https://www.instagram.com/watashinopurin/",
-      link: "https://watashinopurin.com/",
-      price: 660,
+      dish: "スティックチーズケーキ,ホットチョコ",
+      categories: ["スイーツ","カフェ"],
+      restaurant: "４番目の珈琲店",
+      url: "https://i.gyazo.com/340c39c5dee850b2991b18ecd5f9248f.png",
+      comment: "スティックチーズケーキとホットチョコレート",
+      instagram: "",
+      link: "https://hatayacoffee.com/information/#hataya4nd",
+      price: 900,
       recommendation: 5,
     },
+    {
+      dish: "よくばり天ざる",
+      categories: ["和食","入りやすい"],
+      restaurant: "えびすそば",
+      url: "https://i.gyazo.com/9778bd2ed3c174561e895152047a979d.jpg",
+      comment:
+        "気軽に入店できる蕎麦屋さん",
+      instagram: "https://www.instagram.com/yebisu_soba/",
+      link: "https://yebisu-soba.com/",
+      price: 1580,
+      recommendation: 6,
+    },
+
     {
       dish: "紅茶",
       categories: ["カフェ", "Wifi有", "充電有"],
@@ -119,11 +143,11 @@ const FoodPage = memo(() => {
       instagram: "",
       link: "http://seijiro.jp/",
       price: 2178,
-      recommendation: 5,
+      recommendation: 6,
     },
     {
       dish: "わらびもち(5個)",
-      categories: ["スイーツ"],
+      categories: ["スイーツ","入りやすい"],
       restaurant: "甘味処鎌倉",
       url: "https://i.gyazo.com/bf6a42b53622fff047431bceb90e50ae.jpg",
       comment: "わらびドリンクも美味しい。黒蜜は別売り(120円)でした",

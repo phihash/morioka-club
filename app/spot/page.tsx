@@ -12,7 +12,7 @@ const SpotPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+            src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
             alt="写真"
           />
         </div>
@@ -62,7 +62,7 @@ const SpotPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+            src="https://i.gyazo.com/a689a9fef3a11a2ed417f9eecbff6a73.jpg"
             alt="写真"
           />
         </div>
@@ -100,7 +100,7 @@ const SpotPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
+            src="https://i.gyazo.com/1c8477bf6e4f76febcdaa32636799a87.jpg"
             alt="写真"
             width="2663"
           />
@@ -112,7 +112,7 @@ const SpotPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+            src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
             alt="写真"
           />
         </div>
@@ -137,7 +137,7 @@ const SpotPage = () => {
           <h2
             className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
           >
-            岩手県立美術館
+            新渡戸稲造先生生誕の地
           </h2>
           <p
             className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
@@ -150,7 +150,7 @@ const SpotPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
+            src="https://i.gyazo.com/9fb9a302d2c5ed6922bc92051cee4650.jpg"
             alt="写真"
             width="2663"
           />
@@ -162,7 +162,7 @@ const SpotPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+            src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
             alt="写真"
           />
         </div>
@@ -212,7 +212,7 @@ const SpotPage = () => {
         <div className="md:w-1/2">
           <img
             className="rounded-xl w-full  mb-4"
-            src="https://i.gyazo.com/ceb5ba182e14462acd5c0b2fae1a9a35.jpg"
+            src="https://i.gyazo.com/1289e174dc6da810734d8ab12281f1d3.jpg"
             alt="写真"
           />
         </div>

@@ -101,12 +101,12 @@ const SouvenirPage = () => {
     },
   ]);
   const handleAllSouvenirCategory = () => {
-    if(!selectedCategories.length){
-      setSelectedCategories(souvenirButtonNames)
-    }else{
+    if (!selectedCategories.length) {
+      setSelectedCategories(souvenirButtonNames);
+    } else {
       setSelectedCategories([]);
     }
-  }
+  };
   const [sortBy, setSortBy] = useState("");
   const handleSortByLowPrice = () => {
     setSortBy("Low");
@@ -144,69 +144,70 @@ const SouvenirPage = () => {
   };
   return (
     <div className="bg-green-700 ">
-    <div className="bg-white rounded-b-3xl">
-    <div className="w-11/12 mx-auto pb-8">
-      <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
-        カテゴリ
-      </h3>
-      <div className="px-3 flex flex-wrap gap-1.5 mt-6">
-      <SouvenirButton
-                    onClick={handleAllSouvenirCategory}
-                    name="All"
-             selected={Boolean(selectedCategories.length == souvenirButtonNames.length)} // カテゴリ全選択じゃないと色つけさせないようにするため
-
-      />
-        {souvenirButtonNames.map((souvenirButtonName, index) => {
-          return (
+      <div className="bg-white rounded-b-3xl">
+        <div className="w-11/12 mx-auto pb-8">
+          <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
+            カテゴリ
+          </h3>
+          <div className="px-3 flex flex-wrap gap-1.5 mt-6">
             <SouvenirButton
-              key={index}
-              onClick={() => clickSouvenirCategory(souvenirButtonName)}
-              name={souvenirButtonName}
-              selected={selectedCategories.includes(souvenirButtonName)}
+              onClick={handleAllSouvenirCategory}
+              name="All"
+              selected={Boolean(
+                selectedCategories.length == souvenirButtonNames.length,
+              )} // カテゴリ全選択じゃないと色つけさせないようにするため
             />
-          );
-        })}
-      </div>
+            {souvenirButtonNames.map((souvenirButtonName, index) => {
+              return (
+                <SouvenirButton
+                  key={index}
+                  onClick={() => clickSouvenirCategory(souvenirButtonName)}
+                  name={souvenirButtonName}
+                  selected={selectedCategories.includes(souvenirButtonName)}
+                />
+              );
+            })}
+          </div>
 
-      <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
-        ソート
-      </h3>
-      <div className="px-3 flex flex-wrap gap-4 mt-6">
-        <SouvenirRadioButton
-          name="高い順"
-          onClick={handleSortByHighPrice}
-        ></SouvenirRadioButton>
-        <SouvenirRadioButton
-          name="安い順"
-          onClick={handleSortByLowPrice}
-        ></SouvenirRadioButton>
-        <SouvenirRadioButton
-          name="おすすめ順"
-          onClick={handleSortByRecommendation}
-        ></SouvenirRadioButton>
+          <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
+            ソート
+          </h3>
+          <div className="px-3 flex flex-wrap gap-4 mt-6">
+            <SouvenirRadioButton
+              name="高い順"
+              onClick={handleSortByHighPrice}
+            ></SouvenirRadioButton>
+            <SouvenirRadioButton
+              name="安い順"
+              onClick={handleSortByLowPrice}
+            ></SouvenirRadioButton>
+            <SouvenirRadioButton
+              name="おすすめ順"
+              onClick={handleSortByRecommendation}
+            ></SouvenirRadioButton>
+          </div>
+          <div className="px-3 flex flex-wrap mt-4">
+            {/* アイテムエリア */}
+            {souvenirItems.map((item, index) => {
+              if (
+                selectedCategories.some((category) =>
+                  item.categories.includes(category),
+                )
+              ) {
+                return (
+                  <SouvenirItem
+                    key={index}
+                    name={item.name}
+                    company={item.company}
+                    comment={item.comment}
+                  ></SouvenirItem>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </div>
       </div>
-      <div className="px-3 flex flex-wrap mt-4">
-        {/* アイテムエリア */}
-        {souvenirItems.map((item, index) => {
-          if (
-            selectedCategories.some((category) =>
-              item.categories.includes(category),
-            )
-          ) {
-            return (
-              <SouvenirItem
-                key={index}
-                name={item.name}
-                company={item.company}
-                comment={item.comment}
-              ></SouvenirItem>
-            );
-          }
-          return null;
-        })}
-      </div>
-    </div>
-    </div>
     </div>
   );
 };

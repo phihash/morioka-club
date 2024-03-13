@@ -2,7 +2,7 @@
 import React from "react";
 import FoodItem from "../components/foodItem";
 import { noto_sans_jp } from "../fonts";
-import { useState , memo } from "react";
+import { useState, memo } from "react";
 import FoodButton from "../components/foodButton";
 import FoodRadioButton from "../components/foodRadioButton";
 
@@ -10,7 +10,16 @@ import FoodRadioButton from "../components/foodRadioButton";
 const FoodPage = memo(() => {
   const [selectedFoodCategories, setSelectedFoodCategories] = useState<
     string[]
-  >(["Wifi有", "充電有", "カフェ", "入りやすい", "和食", "洋食", "海鮮","スイーツ"]);
+  >([
+    "Wifi有",
+    "充電有",
+    "カフェ",
+    "入りやすい",
+    "和食",
+    "洋食",
+    "海鮮",
+    "スイーツ",
+  ]);
   const foodButtonNames = [
     "Wifi有",
     "充電有",
@@ -19,19 +28,19 @@ const FoodPage = memo(() => {
     "和食",
     "洋食",
     "海鮮",
-    "スイーツ"
+    "スイーツ",
   ];
   const handleAllFoodCategory = () => {
-    if(!selectedFoodCategories.length){
-      setSelectedFoodCategories(foodButtonNames)
-    }else{
+    if (!selectedFoodCategories.length) {
+      setSelectedFoodCategories(foodButtonNames);
+    } else {
       setSelectedFoodCategories([]);
     }
-  }
+  };
   const [foodItems, setFoodItems] = useState([
     {
       dish: "京抹茶プリン (1個)",
-      categories: ["スイーツ","入りやすい"],
+      categories: ["スイーツ", "入りやすい"],
       restaurant: "私のプリン 桜",
       url: "https://i.gyazo.com/e7d416b9ecf5c1071425aa290e353c18.jpg",
       comment:
@@ -77,7 +86,7 @@ const FoodPage = memo(() => {
     },
     {
       dish: "わらじかつ定食",
-      categories: ["和食","入りやすい"],
+      categories: ["和食", "入りやすい"],
       restaurant: "むら八",
       url: "https://i.gyazo.com/d15ae02a8a3efed7e565a7e51ee7f501.jpg",
       comment:
@@ -89,7 +98,7 @@ const FoodPage = memo(() => {
     },
     {
       dish: "スティックチーズケーキ,ホットチョコ",
-      categories: ["スイーツ","カフェ"],
+      categories: ["スイーツ", "カフェ"],
       restaurant: "４番目の珈琲店",
       url: "https://i.gyazo.com/340c39c5dee850b2991b18ecd5f9248f.png",
       comment: "スティックチーズケーキとホットチョコレート",
@@ -100,11 +109,10 @@ const FoodPage = memo(() => {
     },
     {
       dish: "よくばり天ざる",
-      categories: ["和食","入りやすい"],
+      categories: ["和食", "入りやすい"],
       restaurant: "えびすそば",
       url: "https://i.gyazo.com/9778bd2ed3c174561e895152047a979d.jpg",
-      comment:
-        "気軽に入店できる蕎麦屋さん",
+      comment: "気軽に入店できる蕎麦屋さん",
       instagram: "https://www.instagram.com/yebisu_soba/",
       link: "https://yebisu-soba.com/",
       price: 1580,
@@ -147,7 +155,7 @@ const FoodPage = memo(() => {
     },
     {
       dish: "わらびもち(5個)",
-      categories: ["スイーツ","入りやすい"],
+      categories: ["スイーツ", "入りやすい"],
       restaurant: "甘味処鎌倉",
       url: "https://i.gyazo.com/bf6a42b53622fff047431bceb90e50ae.jpg",
       comment: "わらびドリンクも美味しい。黒蜜は別売り(120円)でした",
@@ -213,9 +221,11 @@ const FoodPage = memo(() => {
           </h3>
           <div className="px-3 flex flex-wrap gap-1.5 mt-6">
             <FoodButton
-            onClick={handleAllFoodCategory}
-            name="All"
-            selected={Boolean(selectedFoodCategories.length == foodButtonNames.length)} // カテゴリ全選択じゃないと色つけさせないようにするため
+              onClick={handleAllFoodCategory}
+              name="All"
+              selected={Boolean(
+                selectedFoodCategories.length == foodButtonNames.length,
+              )} // カテゴリ全選択じゃないと色つけさせないようにするため
             />
             {foodButtonNames.map((foodButtonName, index) => {
               return (

@@ -1,22 +1,14 @@
 import { noto_sans_jp } from "./fonts";
 import TopPageText from "./components/topPageText";
+import TopSlider from "./components/topSlider";
 
 export default function Home() {
   return (
     <div className="bg-green-700">
-      <div className="bg-white rounded-b-3xl  pb-24">
+      <div className="bg-white rounded-b-3xl pb-24">
         {/* pb-24でした */}
-        <div className="py-24">
-          <p
-            className={`text-6xl font-semibold ${noto_sans_jp.className} w-max mx-auto mb-6`}
-          >
-            🏳️
-          </p>
-          <h1
-            className={`md:text-4xl text-3xl font-semibold ${noto_sans_jp.className} w-max mx-auto `}
-          >
-            もりおか ガイド
-          </h1>
+        <div className="md:py-16 py-8">
+          <TopSlider />
         </div>
 
         <div className={`md:w-3/4 w-10/12 mx-auto ${noto_sans_jp.className}`}>

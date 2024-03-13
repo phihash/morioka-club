@@ -22,7 +22,6 @@ const DiaryPage = () => {
         <div
           className={`md:w-3/4 w-10/12 mx-auto ${noto_sans_jp.className} font-semibold`}
         >
-
           このページは、現在編集中です。
         </div>
       </div>

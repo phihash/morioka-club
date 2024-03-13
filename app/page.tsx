@@ -26,7 +26,7 @@ export default function Home() {
 
           <div className="md:pt-24 md:pb-18 px-2 py-16">
             <h2
-              className={`${lexend.className} text-4xl font-bold text-cyan-800 pb-16`}
+              className={`${lexend.className} text-4xl font-bold text-cyan-800 pb-12`}
             >
               News
             </h2>

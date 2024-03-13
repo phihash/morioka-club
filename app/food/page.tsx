@@ -49,6 +49,7 @@ const FoodPage = memo(() => {
       link: "https://watashinopurin.com/",
       price: 660,
       recommendation: 5,
+      twitter : "https://twitter.com/watashinopurin"
     },
     {
       dish: "牡蠣ときのこのバター醤油パスタ",
@@ -60,6 +61,8 @@ const FoodPage = memo(() => {
       link: "https://www.trenta.co.jp/",
       price: 1380,
       recommendation: 3,
+      twitter : "https://twitter.com/TREnTA2021"
+
     },
     {
       dish: "じゃじゃ麺(小盛)",
@@ -72,6 +75,8 @@ const FoodPage = memo(() => {
       link: "https://www.pairon.iwate.jp/",
       price: 450,
       recommendation: 2,
+      twitter : "https://twitter.com/officialpairong"
+
     },
     {
       dish: "ランチセットパスタ",
@@ -83,6 +88,8 @@ const FoodPage = memo(() => {
       link: "",
       price: 1450,
       recommendation: 4,
+      twitter : ""
+
     },
     {
       dish: "わらじかつ定食",
@@ -92,9 +99,11 @@ const FoodPage = memo(() => {
       comment:
         "1頭の豚から2枚しか取れない岩手県産の厳選された肉を使用した「とんかつ定食」",
       instagram: "https://www.instagram.com/mura_hachi/",
-      link: "",
+      link: "https://murahachi.co.jp/",
       price: 2068,
       recommendation: 6,
+      twitter : "https://twitter.com/katu_murahachi"
+
     },
     {
       dish: "スティックチーズケーキ,ホットチョコ",
@@ -106,6 +115,8 @@ const FoodPage = memo(() => {
       link: "https://hatayacoffee.com/information/#hataya4nd",
       price: 900,
       recommendation: 5,
+      twitter : ""
+
     },
     {
       dish: "よくばり天ざる",
@@ -117,18 +128,22 @@ const FoodPage = memo(() => {
       link: "https://yebisu-soba.com/",
       price: 1580,
       recommendation: 6,
+      twitter : "https://twitter.com/yebisu_soba"
+
     },
 
     {
       dish: "紅茶",
       categories: ["カフェ", "Wifi有", "充電有"],
-      restaurant: "ナガハマコーヒー",
+      restaurant: "NAGAHAMA COFFEE",
       url: " https://i.gyazo.com/17b6a27d4f51706f62dda218c5e90260.jpg",
       comment: "コメント",
       instagram: "https://www.instagram.com/nagahamacoffee_moriokanishi/",
       link: "http://www.ncafe.co.jp/",
       price: 900,
       recommendation: 4,
+      twitter : "https://twitter.com/NagahamaCoffee"
+
     },
     {
       dish: "季節のタルト",
@@ -141,6 +156,8 @@ const FoodPage = memo(() => {
       link: "https://akiyoshi-jazz.com/west38/",
       price: 1100,
       recommendation: 3,
+      twitter : ""
+
     },
     {
       dish: "寿司",
@@ -152,6 +169,8 @@ const FoodPage = memo(() => {
       link: "http://seijiro.jp/",
       price: 2178,
       recommendation: 6,
+      twitter : "https://twitter.com/seijiro1101"
+
     },
     {
       dish: "わらびもち(5個)",
@@ -163,6 +182,8 @@ const FoodPage = memo(() => {
       link: "https://www.warabimochi-kamakura.com/",
       price: 820,
       recommendation: 4,
+      twitter : "https://twitter.com/kamakura_warabi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+
     },
     {
       dish: "海鮮ちらし",
@@ -175,6 +196,8 @@ const FoodPage = memo(() => {
       link: "https://hideyoshi-inc.com/isono/",
       price: 1298,
       recommendation: 4,
+      twitter : ""
+
     },
   ]);
   const [sortBy, setSortBy] = useState("");
@@ -275,6 +298,7 @@ const FoodPage = memo(() => {
                     instagram={item.instagram}
                     link={item.link}
                     price={item.price}
+                    twitter={item.twitter}
                   ></FoodItem>
                 );
               }

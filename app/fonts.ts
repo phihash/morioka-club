@@ -1,9 +1,15 @@
-import { Inter, Roboto_Mono , Fredoka ,Noto_Sans_JP ,M_PLUS_1p ,Kiwi_Maru ,Zen_Maru_Gothic} from 'next/font/google'
+import { Inter, Roboto_Mono , Fredoka ,Noto_Sans_JP ,M_PLUS_1p ,Kiwi_Maru ,Zen_Maru_Gothic , Lexend} from 'next/font/google'
 
 export const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
+
+export const lexend = Lexend({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 
 export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],

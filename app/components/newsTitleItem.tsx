@@ -12,7 +12,7 @@ const NewsTitleItem = () => {
           <p className=" font-bold text-yellow-900"> 観光スポット</p>
         </div>
         <p
-          className={`${noto_sans_jp.className}  md:text-lg text-base font-semibold pt-4`}
+          className={`${noto_sans_jp.className}  md:text-lg text-base font-semibold pt-6`}
         >
           石割桜がもうすぐ見頃の時期です
         </p>

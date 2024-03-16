@@ -17,7 +17,7 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3 w-max flex  items-center gap-2  ${pathname == "/food" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <IoFastFood />
+            <IoFastFood   size={22} />
             食べ物
           </div>
         </Link>
@@ -26,15 +26,15 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2  ${pathname == "/souvenir" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <IoGift />
+            <IoGift  size={22}  />
             おみやげ
           </div>
         </Link>
         <Link href="/spot">
           <div
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-3 py-3  w-max flex  items-center gap-2   ${pathname == "/spot" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-1 py-3  w-max flex  items-center gap-2   ${pathname == "/spot" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <MdPlace />
+            <MdPlace size={22} />
             観光スポット
           </div>
         </Link>
@@ -42,7 +42,7 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-3 py-3  w-max flex  items-center gap-2  ${pathname == "/event" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <MdLightMode />
+            <MdLightMode  size={22}   />
             イベント
           </div>
         </Link>
@@ -50,7 +50,7 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2  ${pathname == "/facility" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <FaRegBuilding />
+            <FaRegBuilding  size={22}   />
             商業施設
           </div>
         </Link>
@@ -58,7 +58,7 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2 ${pathname == "/diary" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <GiNotebook />
+            <GiNotebook   size={22}  />
             体験記
           </div>
         </Link>

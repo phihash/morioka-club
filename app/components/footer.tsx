@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
           {/* <hr className="h-px my-6 bg-white border-0 dark:bg-white" /> */}
           <p
-            className={`${lexend.className} text-center text-gray-900 pt-20 text-lg font-bold`}
+            className={`${lexend.className} text-center text-white pt-20 text-lg font-bold`}
           >
             © 2024 phihash
           </p>

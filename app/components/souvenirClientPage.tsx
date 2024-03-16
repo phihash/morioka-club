@@ -14,8 +14,6 @@ const SouvenirPage = () => {
     "あんこ",
     "日持ちする",
     "職場用",
-    "自分用",
-    "家族・友人用",
   ]);
   const souvenirButtonNames = [
     "甘い",
@@ -24,81 +22,21 @@ const SouvenirPage = () => {
     "あんこ",
     "日持ちする",
     "職場用",
-    "自分用",
-    "家族・友人用",
   ];
   const [souvenirItems, setSouvenirItems] = useState([
-    {
-      name: "南部せんべい",
-      categories: ["個包装", "日持ちする"],
-      company: "",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
-      price: 1458,
-      recommendation: 2,
-    },
-    {
-      name: "盛岡冷麺",
-      categories: ["日持ちする"],
-      company: "ぴょんぴょん舎",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
 
-      price: 1458,
-      recommendation: 2,
-    },
-    {
-      name: "岩手のはちみつ ラングドシャ10個入",
-      categories: ["甘い"],
-      company: "山本養蜂場",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
-
-      price: 756,
-      recommendation: 4,
-    },
     {
       name: "三陸えびせんべい",
-      categories: ["スナック系"],
-      company: "",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
-
-      price: 1458,
-      recommendation: 3,
+      categories: ["スナック系","職場用","個包装","日持ちする"],
+      company: "五篤丸水産",
+      comment: "お酒にもあいそうなお煎餅",
+      price: 648,
+      recommendation: 4,
+      kcal: 22,
+      url: "https://i.gyazo.com/57a03ddef15d662a15225e80c4bc3638.jpg",
+      link:"https://gotokumaru.jp/"
     },
-    {
-      name: "かもめのたまご",
-      categories: ["あんこ", "甘い"],
-      company: "さいとう製菓",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
 
-      price: 1458,
-      recommendation: 3,
-    },
-    {
-      name: "ごま摺り団子",
-      categories: ["あんこ"],
-      company: "",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
-
-      price: 1458,
-      recommendation: 3,
-    },
-    {
-      name: "Cava（サヴァ）缶",
-      categories: ["日持ちする"],
-      company: "",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
-
-      price: 1458,
-      recommendation: 3,
-    },
-    {
-      name: "Cava（サヴァ）缶",
-      categories: ["日持ちする"],
-      company: "小山製麺",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
-
-      price: 1458,
-      recommendation: 2,
-    },
   ]);
   const handleAllSouvenirCategory = () => {
     if (!selectedCategories.length) {
@@ -200,6 +138,10 @@ const SouvenirPage = () => {
                     name={item.name}
                     company={item.company}
                     comment={item.comment}
+                    price={item.price}
+                    kcal={item.kcal}
+                    url={item.url}
+                    link={item.link}
                   ></SouvenirItem>
                 );
               }

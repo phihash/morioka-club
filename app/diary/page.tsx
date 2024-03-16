@@ -1,5 +1,36 @@
 import React from "react";
 import { noto_sans_jp } from "../fonts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://morioka.club/diary"),
+  title: "もりおかクラブ | 体験記",
+  description: "実際に盛岡に住んでみて",
+  openGraph: {
+    title: "もりおかクラブ | 体験記",
+    description: "実際に盛岡に住んでみて",
+    url: "https://morioka.club/diary",
+    siteName: "もりおかクラブ | 体験記",
+    locale: "ja_JP",
+    type: "website",
+    images: [
+      {
+        url: "https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png", // Must be an absolute URL
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png"],
+  },
+  icons: [
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/public/icon.png",
+    },
+  ],
+};
 
 const DiaryPage = () => {
   return (

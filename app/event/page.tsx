@@ -1,5 +1,36 @@
 import React from "react";
 import { noto_sans_jp } from "../fonts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://morioka.club/event"),
+  title: "もりおかクラブ | イベント",
+  description: "盛岡のイベントについて紹介します!",
+  openGraph: {
+    title: "もりおかクラブ | イベント",
+    description:  "盛岡のイベントについて紹介します!",
+    url: "https://morioka.club/event",
+    siteName: "もりおかクラブ | イベント",
+    locale: "ja_JP",
+    type: "website",
+    images: [
+      {
+        url: "https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png", // Must be an absolute URL
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png"],
+  },
+  icons: [
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      url: "/public/icon.png",
+    },
+  ],
+};
 
 const EventPage = () => {
   return (

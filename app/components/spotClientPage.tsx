@@ -138,7 +138,6 @@ const SpotPage = () => {
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
                 御田屋清水
-
                 <br />
                 岩手銀行赤レンガ館は、岩手県盛岡市にある歴史的建造物で、1911年に建てられた。洋風建築の優れた例であり、観光地としても人気があり、博物館やイベント会場として利用されている。地域の文化的遺産として重要視されている。
               </p>
@@ -155,7 +154,7 @@ const SpotPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                 新渡戸稲造先生生誕の地
+                新渡戸稲造先生生誕の地
                 <br />
                 別名は二度泣き橋と呼ばれている。
               </p>

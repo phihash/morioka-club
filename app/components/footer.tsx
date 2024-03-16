@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { noto_sans_jp, zen_maru_gothic, lexend } from "../fonts";
+import {zen_maru_gothic, lexend } from "../fonts";
 import { usePathname } from "next/navigation";
 
 // import { useState } from "react";
@@ -21,42 +21,42 @@ export default function Footer() {
           <div className="md:flex">
             <Link href="/food">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max px-4 py-3 tracking-wider`}
+                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/food" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 食べ物
               </div>
             </Link>
             <Link href="/souvenir">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max px-4 py-3 tracking-wider`}
+                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/souvenir" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 おみやげ
               </div>
             </Link>
             <Link href="/spot">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max px-4 py-3 tracking-wider`}
+                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/spot" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 観光スポット
               </div>
             </Link>
             <Link href="/event">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max px-4 py-3 tracking-wider`}
+                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/event" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 イベント
               </div>
             </Link>
             <Link href="/facility">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max px-4 py-3 tracking-wider`}
+                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/facility" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 商業施設
               </div>
             </Link>
             <Link href="/diary">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max px-4 py-3 tracking-wider`}
+                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/diary" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 体験記
               </div>

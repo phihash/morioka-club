@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import {zen_maru_gothic, lexend } from "../fonts";
+import { zen_maru_gothic, lexend } from "../fonts";
 import { usePathname } from "next/navigation";
 
 // import { useState } from "react";

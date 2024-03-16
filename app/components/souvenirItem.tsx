@@ -1,5 +1,6 @@
 import React from "react";
 import { noto_sans_jp, zen_maru_gothic } from "../fonts";
+import Image from "next/image";
 
 const souvenirItem: React.FC<SouvenirItemProps> = ({
   name,
@@ -9,10 +10,12 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
   return (
     <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
       <div className="p-2 rounded-lg">
-        <img
+        <Image
           className="rounded-xl w-full object-cover object-center mb-4"
           src="https://i.gyazo.com/29463dd3092c3858e4aa56c9549b4305.jpg"
           alt="写真"
+          width={600}
+          height={800}
         />
         <h3
           className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-1`}

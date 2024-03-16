@@ -19,6 +19,7 @@ const FoodClientPage = memo(() => {
     "洋食",
     "海鮮",
     "スイーツ",
+    "麺類",
   ]);
   const foodButtonNames = [
     "Wifi有",
@@ -29,6 +30,7 @@ const FoodClientPage = memo(() => {
     "洋食",
     "海鮮",
     "スイーツ",
+    "麺類",
   ];
   const handleAllFoodCategory = () => {
     if (!selectedFoodCategories.length) {
@@ -65,7 +67,7 @@ const FoodClientPage = memo(() => {
     },
     {
       dish: "じゃじゃ麺(小盛)",
-      categories: ["和食"],
+      categories: ["和食", "麺類"],
       restaurant: "白龍",
       url: "https://i.gyazo.com/6e32e23b4bc04dca2033a206ab879941.jpg",
       comment:
@@ -78,7 +80,7 @@ const FoodClientPage = memo(() => {
     },
     {
       dish: "ランチセットパスタ",
-      categories: ["洋食"],
+      categories: ["洋食", "麺類"],
       restaurant: "銀河堂1890 Sweets&Bakery",
       url: "https://i.gyazo.com/b1ca1eab3ffc293ead654c89f01879b7.jpg",
       comment: "コメント",
@@ -115,7 +117,7 @@ const FoodClientPage = memo(() => {
     },
     {
       dish: "よくばり天ざる",
-      categories: ["和食", "入りやすい"],
+      categories: ["和食", "入りやすい", "麺類"],
       restaurant: "えびすそば",
       url: "https://i.gyazo.com/9778bd2ed3c174561e895152047a979d.jpg",
       comment: "気軽に入店できる蕎麦屋さん",
@@ -162,6 +164,30 @@ const FoodClientPage = memo(() => {
       price: 2178,
       recommendation: 6,
       twitter: "https://twitter.com/seijiro1101",
+    },
+    {
+      dish: "つけ麺 並盛",
+      categories: ["麺類"],
+      restaurant: "つけ麺 和",
+      url: "https://i.gyazo.com/95a1b976ee6f8adf1d0387a625567388.jpg",
+      comment: "麺は2種類の小麦粉を使用し、濃厚なスープと絡んで美味!",
+      instagram: "https://www.instagram.com/kazu_morioka.fezan/",
+      link: "",
+      price: 1200,
+      recommendation: 5,
+      twitter: "https://twitter.com/kazu_morioka",
+    },
+    {
+      dish: "ミルクコーヒー バニラと黒ごまアイス",
+      categories: ["カフェ", "スイーツ"],
+      restaurant: "茶廊 車門",
+      url: "https://i.gyazo.com/439357c263e9b2668ee33f0ac3b8fe5f.jpg",
+      comment: "レトロな雰囲気のカフェ",
+      instagram: "",
+      link: "",
+      price: 1010,
+      recommendation: 3,
+      twitter: "",
     },
     {
       dish: "わらびもち(5個)",

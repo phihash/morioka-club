@@ -3,8 +3,8 @@ import React from "react";
 import Link from "next/link";
 import { noto_sans_jp } from "../fonts";
 import { usePathname } from "next/navigation";
-import { IoFastFood ,IoGift } from "react-icons/io5";
-import { MdPlace ,MdLightMode  } from "react-icons/md";
+import { IoFastFood, IoGift } from "react-icons/io5";
+import { MdPlace, MdLightMode } from "react-icons/md";
 import { FaRegBuilding } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
 
@@ -26,7 +26,7 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2  ${pathname == "/souvenir" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <IoGift/>
+            <IoGift />
             おみやげ
           </div>
         </Link>
@@ -34,7 +34,7 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-3 py-3  w-max flex  items-center gap-2   ${pathname == "/spot" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <MdPlace/>
+            <MdPlace />
             観光スポット
           </div>
         </Link>
@@ -42,7 +42,7 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-3 py-3  w-max flex  items-center gap-2  ${pathname == "/event" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <MdLightMode/>
+            <MdLightMode />
             イベント
           </div>
         </Link>
@@ -58,7 +58,7 @@ const Navigation = () => {
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2 ${pathname == "/diary" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
-            <GiNotebook/>
+            <GiNotebook />
             体験記
           </div>
         </Link>

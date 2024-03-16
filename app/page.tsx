@@ -6,14 +6,14 @@ export default function Home() {
     <div className="bg-green-700">
       <div className="bg-white rounded-b-3xl pb-24">
         {/* pb-24でした */}
-        <div className="md:py-16 py-8">
+        <div className="md:py-10 py-6">
           <TopSlider />
         </div>
 
         <div className={`md:w-3/4 w-10/12 mx-auto `}>
-          <div className=" md:pt-8 md:pb-18 px-2 py-16">
+          <div className=" md:pt-12 md:pb-18 px-2 py-8">
             <h2
-              className={`${zen_maru_gothic.className} md:text-4xl text-3xl font-bold text-yellow-900`}
+              className={`${zen_maru_gothic.className} text-3xl font-bold text-yellow-900`}
             >
               このサイトについて
             </h2>
@@ -24,9 +24,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="md:pt-24 md:pb-18 px-2 py-16">
+          <div className="md:pt-24 md:pb-18 px-2 py-12">
             <h2
-              className={`${lexend.className} text-4xl font-bold text-cyan-800 pb-12`}
+              className={`${lexend.className} text-3xl font-bold text-cyan-800 pb-8`}
             >
               News
             </h2>

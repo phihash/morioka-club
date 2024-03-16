@@ -4,14 +4,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://morioka.club/souvenir"),
   title: "もりおかクラブ | おみやげ",
-  description:
-    "盛岡のおみやげを紹介しています!",
+  description: "盛岡のおみやげを紹介しています!",
   openGraph: {
     title: "もりおかクラブ | おみやげ",
-    description:
-    "盛岡のおみやげを紹介しています!",
+    description: "盛岡のおみやげを紹介しています!",
     url: "https://morioka.club/souvenir",
-    siteName:  "もりおかクラブ | おみやげ" ,
+    siteName: "もりおかクラブ | おみやげ",
     locale: "ja_JP",
     type: "website",
     images: [
@@ -33,10 +31,9 @@ export const metadata: Metadata = {
   ],
 };
 
-
 // eslint-disable-next-line react/display-name
 const SouvenirPage = () => {
-  return <SouvenirClientPage/>;
+  return <SouvenirClientPage />;
 };
 
 export default SouvenirPage;

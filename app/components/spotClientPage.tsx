@@ -1,5 +1,6 @@
 import React from "react";
 import { zen_maru_gothic, noto_sans_jp } from "../fonts";
+import Image from "next/image";
 
 const SpotPage = () => {
   return (
@@ -10,10 +11,12 @@ const SpotPage = () => {
           <div className="mt-10 md:flex">
             {/* でかいサイズは写真半分に */}
             <div className="md:w-1/2">
-              <img
-                className="rounded-xl w-full  mb-4"
+              <Image
+                className="rounded-xl w-full mb-4"
                 src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
-                alt="写真"
+                alt="岩手銀行赤レンガ館の写真"
+                width={600}
+                height={800}
               />
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
@@ -51,11 +54,12 @@ const SpotPage = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
-                alt="写真"
-                width="2663"
+                alt="開運橋の写真"
+                width={600}
+                height={800}
               />
             </div>
           </div>
@@ -63,10 +67,12 @@ const SpotPage = () => {
           <div className="mt-10 md:flex">
             {/* でかいサイズは写真半分に */}
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/a689a9fef3a11a2ed417f9eecbff6a73.jpg"
                 alt="写真"
+                width={600}
+                height={800}
               />
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
@@ -101,11 +107,12 @@ const SpotPage = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/1c8477bf6e4f76febcdaa32636799a87.jpg"
                 alt="写真"
-                width="2663"
+                width={600}
+                height={800}
               />
             </div>
           </div>
@@ -113,22 +120,25 @@ const SpotPage = () => {
           <div className="mt-10 md:flex">
             {/* でかいサイズは写真半分に */}
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
-                alt="写真"
+                src="https://i.gyazo.com/47e10e10c4a9845552be1dc74365abb9.jpg"
+                alt="御田屋清水の写真"
+                width={600}
+                height={800}
               />
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
               <h2
                 className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
               >
-                啄木新婚の家
+                御田屋清水
               </h2>
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                東京駅を設計した辰野金吾が設計した建築物。
+                御田屋清水
+
                 <br />
                 岩手銀行赤レンガ館は、岩手県盛岡市にある歴史的建造物で、1911年に建てられた。洋風建築の優れた例であり、観光地としても人気があり、博物館やイベント会場として利用されている。地域の文化的遺産として重要視されている。
               </p>
@@ -145,78 +155,30 @@ const SpotPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                北上川にかかる橋。
+                 新渡戸稲造先生生誕の地
                 <br />
                 別名は二度泣き橋と呼ばれている。
               </p>
             </div>
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/9fb9a302d2c5ed6922bc92051cee4650.jpg"
-                alt="写真"
-                width="2663"
+                alt=" 新渡戸稲造先生の像の写真"
+                width={600}
+                height={800}
               />
             </div>
           </div>
           {/* くぎり */}
           <div className="mt-10 md:flex">
-            {/* でかいサイズは写真半分に */}
             <div className="md:w-1/2">
-              <img
-                className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
-                alt="写真"
-              />
-            </div>
-            <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
-              <h2
-                className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
-              >
-                大慈清水・青龍水
-              </h2>
-              <p
-                className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
-              >
-                東京駅を設計した辰野金吾が設計した建築物。
-                <br />
-                岩手銀行赤レンガ館は、岩手県盛岡市にある歴史的建造物で、1911年に建てられた。洋風建築の優れた例であり、観光地としても人気があり、博物館やイベント会場として利用されている。地域の文化的遺産として重要視されている。
-              </p>
-            </div>
-          </div>
-          {/* くぎり */}
-          <div className="mt-20 flex flex-col-reverse md:flex-row">
-            <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
-              <h2
-                className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
-              >
-                啄木・賢治青春館
-              </h2>
-              <p
-                className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
-              >
-                北上川にかかる橋。
-                <br />
-                別名は二度泣き橋と呼ばれている。
-              </p>
-            </div>
-            <div className="md:w-1/2">
-              <img
-                className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
-                alt="写真"
-                width="2663"
-              />
-            </div>
-          </div>
-          {/* くぎり */}
-          <div className="mt-10 md:flex">
-            {/* でかいサイズは写真半分に */}
-            <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/1289e174dc6da810734d8ab12281f1d3.jpg"
-                alt="写真"
+                alt="盛岡八幡宮の写真"
+                width={600}
+                height={800}
               />
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
@@ -240,22 +202,21 @@ const SpotPage = () => {
               <h2
                 className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
               >
-                マリオス
+                マリオス展望室
               </h2>
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                北上川にかかる橋。
-                <br />
-                別名は二度泣き橋と呼ばれている。
+                マリオスの最上階,展望室から盛岡の景色を一望
               </p>
             </div>
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
-                alt="写真"
-                width="2663"
+                src="https://i.gyazo.com/f6f2af595a202092dc7fd5a900b996e3.jpg"
+                alt="マリオス展望室から見える盛岡市の景色の写真"
+                width={600}
+                height={800}
               />
             </div>
           </div>

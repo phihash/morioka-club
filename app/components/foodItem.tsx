@@ -4,6 +4,7 @@ import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
 import { memo } from "react";
+import Image from "next/image";
 
 // eslint-disable-next-line react/display-name
 const foodItem: React.FC<FoodItemProps> = memo(
@@ -11,10 +12,12 @@ const foodItem: React.FC<FoodItemProps> = memo(
     return (
       <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
         <div className="p-2 rounded-lg">
-          <img
+          <Image
             className="h-64 rounded-xl w-full object-cover object-center mb-4"
             src={url}
             alt="写真"
+            width={600}
+            height={800}
           />
           <h3
             className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-1`}

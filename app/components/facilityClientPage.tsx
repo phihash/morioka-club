@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { zen_maru_gothic, noto_sans_jp } from "../fonts";
 import Link from "next/link";
 const FacilityPage = () => {
@@ -10,10 +11,12 @@ const FacilityPage = () => {
           <div className="mt-10 md:flex">
             {/* でかいサイズは写真半分に */}
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
                 alt="写真"
+                width={600}
+                height={800}
               />
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
@@ -47,21 +50,24 @@ const FacilityPage = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/dc4cbdd6df2d21ef8f9eb94237163c51.png"
                 alt="写真"
-                width="2663"
+                width={600}
+                height={800}
               />
             </div>
           </div>
           {/* くぎり */}
           <div className="mt-10 md:flex">
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/3bdf8089597443ec7f7429287e2888ad.png"
                 alt="写真"
+                width={600}
+                height={800}
               />
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
@@ -101,21 +107,24 @@ const FacilityPage = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
+                src="https://i.gyazo.com/84483389b4c0f0f3678f784b28fe6676.jpg"
                 alt="写真"
-                width="2663"
+                width={600}
+                height={800}
               />
             </div>
           </div>
           {/* くぎり */}
           <div className="mt-10 md:flex">
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png"
                 alt="写真"
+                width={600}
+                height={800}
               />
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
@@ -155,11 +164,12 @@ const FacilityPage = () => {
               </p>
             </div>
             <div className="md:w-1/2">
-              <img
+              <Image
                 className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
+                src="https://i.gyazo.com/c7fd9dc5b6a345b321b34946e0bdfc5b.jpg"
                 alt="写真"
-                width="2663"
+                width={600}
+                height={800}
               />
             </div>
           </div>

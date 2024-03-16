@@ -4,14 +4,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://morioka.club/spot"),
   title: "もりおかクラブ | 観光スポット",
-  description:
-  "盛岡周辺の主な観光スポットを紹介しています!",
+  description: "盛岡周辺の主な観光スポットを紹介しています!",
   openGraph: {
     title: "もりおかクラブ | 観光スポット",
-    description:
-    "盛岡周辺の主な観光スポットを紹介しています!",
+    description: "盛岡周辺の主な観光スポットを紹介しています!",
     url: "https://morioka.club/spot",
-    siteName:  "もりおかクラブ | 観光スポット" ,
+    siteName: "もりおかクラブ | 観光スポット",
     locale: "ja_JP",
     type: "website",
     images: [
@@ -33,10 +31,9 @@ export const metadata: Metadata = {
   ],
 };
 
-
 // eslint-disable-next-line react/display-name
 const SpotPage = () => {
-  return <SpotClientPage/>;
+  return <SpotClientPage />;
 };
 
 export default SpotPage;

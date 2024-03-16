@@ -1,13 +1,13 @@
 import React from "react";
 import { noto_sans_jp, zen_maru_gothic } from "../fonts";
-import { FaInstagram ,FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
 import { memo } from "react";
 
 // eslint-disable-next-line react/display-name
 const foodItem: React.FC<FoodItemProps> = memo(
-  ({ dish, restaurant, url, comment, instagram, link, price , twitter }) => {
+  ({ dish, restaurant, url, comment, instagram, link, price, twitter }) => {
     return (
       <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
         <div className="p-2 rounded-lg">
@@ -78,7 +78,7 @@ interface FoodItemProps {
   instagram: string;
   link: string;
   price: Number;
-  twitter : string;
+  twitter: string;
 }
 
 export default foodItem;

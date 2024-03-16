@@ -1,18 +1,23 @@
 import React from "react";
 import { noto_sans_jp, zen_maru_gothic } from "../fonts";
 import Image from "next/image";
+import Link from "next/link";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const souvenirItem: React.FC<SouvenirItemProps> = ({
   name,
   company,
   comment,
+  price,
+  url,
+  link
 }) => {
   return (
     <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
       <div className="p-2 rounded-lg">
         <Image
-          className="rounded-xl w-full object-cover object-center mb-4"
-          src="https://i.gyazo.com/29463dd3092c3858e4aa56c9549b4305.jpg"
+          className="h-64 rounded-xl w-full object-cover object-center mb-4"
+          src={url}
           alt="写真"
           width={600}
           height={800}
@@ -32,6 +37,21 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
         >
           {comment}
         </p>
+        <h2
+          className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
+        >
+          {String(price)} 円
+        </h2>
+        <div className="flex justify-end gap-4 mt-5">
+        {link ? (
+              <Link rel="noopener noreferrer" target="_blank" href={link}>
+                {" "}
+                <FaExternalLinkAlt size="30px" />{" "}
+              </Link>
+            ) : (
+              ""
+            )}
+</div>
       </div>
     </div>
   );
@@ -41,6 +61,10 @@ interface SouvenirItemProps {
   name: string;
   company: string;
   comment: string;
+  price: Number;
+  kcal: Number;
+  url: string;
+  link:string;
 }
 
 export default souvenirItem;

@@ -13,7 +13,7 @@ const FacilityPage = () => {
             <div className="md:w-1/2">
               <Image
                 className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
+                src="https://i.gyazo.com/a2d845d90ec71197f21acbcd0cd9216e.jpg"
                 alt="写真"
                 width={600}
                 height={800}

@@ -8,19 +8,6 @@ import FoodRadioButton from "../components/foodRadioButton";
 
 // eslint-disable-next-line react/display-name
 const FoodClientPage = memo(() => {
-  const [selectedFoodCategories, setSelectedFoodCategories] = useState<
-    string[]
-  >([
-    "Wifi有",
-    "充電有",
-    "カフェ",
-    "入りやすい",
-    "和食",
-    "洋食",
-    "海鮮",
-    "スイーツ",
-    "麺類",
-  ]);
   const foodButtonNames = [
     "Wifi有",
     "充電有",
@@ -32,6 +19,10 @@ const FoodClientPage = memo(() => {
     "スイーツ",
     "麺類",
   ];
+  const [selectedFoodCategories, setSelectedFoodCategories] = useState<
+    string[]
+  >(foodButtonNames);
+
   const handleAllFoodCategory = () => {
     if (!selectedFoodCategories.length) {
       setSelectedFoodCategories(foodButtonNames);
@@ -264,6 +255,7 @@ const FoodClientPage = memo(() => {
     );
     setFoodItems(sortedItems);
   };
+
   const clickFoodCategory = (categoryName: string) => {
     const index = selectedFoodCategories.indexOf(categoryName);
 

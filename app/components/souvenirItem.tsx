@@ -10,7 +10,8 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
   comment,
   price,
   url,
-  link
+  link,
+  kcal
 }) => {
   return (
     <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
@@ -37,11 +38,19 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
         >
           {comment}
         </p>
-        <h2
+        <div className="flex gap-2 mt-2">
+        <p
           className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
         >
           {String(price)} 円
-        </h2>
+        </p>
+        <p
+          className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
+        >
+          {String(kcal)} kcal
+        </p>
+        </div>
+
         <div className="flex justify-end gap-4 mt-5">
         {link ? (
               <Link rel="noopener noreferrer" target="_blank" href={link}>

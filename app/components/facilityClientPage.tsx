@@ -158,6 +158,7 @@ const FacilityPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
+                Morioka Oodori Shopping & Screenの略からとられている。<br/>
                 映画館フォーラム盛岡、ジュンク堂書店などが入った商業施設
                 <br />
                 1Fには盛岡市を本社とする会社が展開するスーパーマーケットが入っている。

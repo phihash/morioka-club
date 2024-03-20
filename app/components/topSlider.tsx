@@ -8,12 +8,12 @@ import "swiper/css/pagination";
 
 export default function TopSlider() {
   const images = [
-    "/images/1.jpg",
+    "/images/spot1.jpg",
+    "/images/food4.jpg",
     "https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg",
-    "https://i.gyazo.com/cd22300a3db30a141b2ba1e80c6294ef.jpg",
-    "https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg",
-    "https://i.gyazo.com/6e32e23b4bc04dca2033a206ab879941.jpg",
-    "https://i.gyazo.com/a689a9fef3a11a2ed417f9eecbff6a73.jpg",
+    "/images/spot4.jpg",
+    "/images/food7.jpg",
+    "/images/spot2.jpg",
   ];
 
   const slideSettings = {

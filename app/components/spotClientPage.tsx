@@ -137,9 +137,8 @@ const SpotPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                御田屋清水
-                <br />
-                岩手銀行赤レンガ館は、岩手県盛岡市にある歴史的建造物で、1911年に建てられた。洋風建築の優れた例であり、観光地としても人気があり、博物館やイベント会場として利用されている。地域の文化的遺産として重要視されている。
+                御田屋清水は、
+                盛岡の街中にひっそりと存在している。大通りの岩手県産業会館前にあり、美味しい水が飲める。
               </p>
             </div>
           </div>
@@ -162,7 +161,7 @@ const SpotPage = () => {
             <div className="md:w-1/2">
               <Image
                 className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/9fb9a302d2c5ed6922bc92051cee4650.jpg"
+                src="/images/spot3.jpg"
                 alt=" 新渡戸稲造先生の像の写真"
                 width={600}
                 height={800}

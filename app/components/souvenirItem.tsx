@@ -22,6 +22,7 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
           alt="写真"
           width={600}
           height={800}
+          loading="lazy"
         />
         <h3
           className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-1`}
@@ -53,7 +54,7 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
 
         <div className="flex justify-end gap-4 mt-5">
         {link ? (
-              <Link rel="noopener noreferrer" target="_blank" href={link}>
+              <Link rel="noopener noreferrer" target="_blank" href={link} aria-label="このおみやげを製造している会社のWebサイトを開く">
                 {" "}
                 <FaExternalLinkAlt size="30px" />{" "}
               </Link>

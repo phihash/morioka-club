@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 export default function TopSlider() {
   const images = [
-    "https://i.gyazo.com/1289e174dc6da810734d8ab12281f1d3.jpg",
+    "/images/1.jpg",
     "https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg",
     "https://i.gyazo.com/cd22300a3db30a141b2ba1e80c6294ef.jpg",
     "https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg",
@@ -47,17 +47,18 @@ export default function TopSlider() {
     >
       {images.map((src: string, index: number) => (
         <SwiperSlide key={index}>
-          <div className="aspect-ratio aspect-ratio-16/9">
-            <Image
-              src={src}
-              width={1920}
-              height={1038}
-              alt="Slider Image"
-              sizes="(min-width: 1024px) 100vw, 60vw"
-              className=" object-cover object-center "
-            />
-          </div>
-        </SwiperSlide>
+        <div className="aspect-ratio aspect-ratio-16/9">
+          <Image
+            src={images[index]}
+            width={1920}
+            height={1038}
+            alt="Slider Image"
+            sizes="(min-width: 1024px) 100vw, 60vw"
+            className="object-cover object-center"
+            loading="lazy"
+          />
+        </div>
+      </SwiperSlide>
       ))}
     </Swiper>
   );

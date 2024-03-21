@@ -115,6 +115,15 @@ const SouvenirPage = () => {
     );
     setSouvenirItems(sortedItems);
   };
+  const handleSortByKcal = () => {
+    setSortBy("Kcal");
+    const sortedItems = [...souvenirItems].sort((a, b) =>
+      sortBy == "Kcal"
+        ? b.kcal - a.kcal
+        : a.kcal - b.kcal,
+    );
+    setSouvenirItems(sortedItems);
+  };
   const clickSouvenirCategory = (categoryName: string) => {
     const index = selectedCategories.indexOf(categoryName);
 
@@ -168,6 +177,10 @@ const SouvenirPage = () => {
             <SouvenirRadioButton
               name="おすすめ順"
               onClick={handleSortByRecommendation}
+            ></SouvenirRadioButton>
+            <SouvenirRadioButton
+              name="カロリー順"
+              onClick={handleSortByKcal}
             ></SouvenirRadioButton>
           </div>
           <div className="px-3 flex flex-wrap mt-4">

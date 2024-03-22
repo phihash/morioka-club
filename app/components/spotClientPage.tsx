@@ -155,7 +155,6 @@ const SpotPage = () => {
               >
                 新渡戸稲造先生生誕の地
                 <br />
-                別名は二度泣き橋と呼ばれている。
               </p>
             </div>
             <div className="md:w-1/2">

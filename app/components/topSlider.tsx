@@ -55,7 +55,6 @@ export default function TopSlider() {
             alt="Slider Image"
             sizes="(min-width: 1024px) 100vw, 60vw"
             className="object-cover object-center"
-            loading="lazy"
           />
         </div>
       </SwiperSlide>

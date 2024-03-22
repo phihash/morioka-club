@@ -11,7 +11,8 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
   price,
   url,
   link,
-  kcal
+  kcal,
+  unit
 }) => {
   return (
     <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
@@ -25,12 +26,12 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
           loading="lazy"
         />
         <h3
-          className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-1`}
+          className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-2`}
         >
           {company}
         </h3>
         <h2
-          className={`${noto_sans_jp.className}  text-xl text-gray-900 font-semibold title-font mb-0.5`}
+          className={`${noto_sans_jp.className}  text-xl text-gray-900 font-semibold title-font mb-3`}
         >
           {name}
         </h2>
@@ -39,16 +40,16 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
         >
           {comment}
         </p>
-        <div className="flex gap-2 mt-2">
+        <div className="flex gap-6 mt-2">
         <p
           className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
         >
           {String(price)} 円
         </p>
         <p
-          className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
+          className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
         >
-          {String(kcal)} kcal
+         1{unit}あたり {String(kcal)} kcal
         </p>
         </div>
 
@@ -75,6 +76,7 @@ interface SouvenirItemProps {
   kcal: Number;
   url: string;
   link:string;
+  unit:string;
 }
 
 export default souvenirItem;

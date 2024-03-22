@@ -8,7 +8,7 @@ import Image from "next/image";
 
 // eslint-disable-next-line react/display-name
 const foodItem: React.FC<FoodItemProps> = memo(
-  ({ dish, restaurant, url, comment, instagram, link, price, twitter }) => {
+  ({ dish, restaurant, url, comment, instagram, link, price, twitter , openingHours }) => {
     return (
       <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
         <div className="p-2 rounded-lg">
@@ -20,7 +20,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
             height={800}
           />
           <h3
-            className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-1`}
+            className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-2`}
           >
             {restaurant}
           </h3>
@@ -36,14 +36,24 @@ const foodItem: React.FC<FoodItemProps> = memo(
           >
             {comment}
           </p>
-          <h2
+        <div className="flex gap-6 mt-2">
+
+          <p
             className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
           >
             {String(price)} 円
-          </h2>
+          </p>
+          <p
+          className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
+
+          >
+          {new Date().toLocaleString('ja-JP', { weekday: 'long' }) + ": " +  openingHours[new Date().toLocaleString('ja-JP', { weekday: 'long' })]}
+
+          </p>
+          </div>
           <div className="flex justify-end gap-4 mt-5">
             {link ? (
-              <Link rel="noopener noreferrer" target="_blank" href={link}>
+              <Link rel="noopener noreferrer" target="_blank" href={link} aria-label="このおみやげを製造している会社のWebサイトを開く">
                 {" "}
                 <FaExternalLinkAlt size="30px" />{" "}
               </Link>
@@ -51,7 +61,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
               ""
             )}
             {twitter ? (
-              <Link rel="noopener noreferrer" target="_blank" href={twitter}>
+              <Link rel="noopener noreferrer" target="_blank" href={twitter} aria-label="このおみやげを製造している会社のXを開く">
                 {" "}
                 <FaXTwitter size="30px" />{" "}
               </Link>
@@ -59,7 +69,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
               ""
             )}
             {instagram ? (
-              <Link rel="noopener noreferrer" target="_blank" href={instagram}>
+              <Link rel="noopener noreferrer" target="_blank" href={instagram} aria-label="このおみやげを製造している会社のInstagramを開く">
                 {" "}
                 <FaInstagram size="32px" />{" "}
               </Link>
@@ -82,6 +92,9 @@ interface FoodItemProps {
   link: string;
   price: Number;
   twitter: string;
+  openingHours: {
+    [day: string]: string;
+  };
 }
 
 export default foodItem;

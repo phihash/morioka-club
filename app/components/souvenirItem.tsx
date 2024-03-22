@@ -12,7 +12,7 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
   url,
   link,
   kcal,
-  unit
+  unit,
 }) => {
   return (
     <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
@@ -41,28 +41,33 @@ const souvenirItem: React.FC<SouvenirItemProps> = ({
           {comment}
         </p>
         <div className="flex gap-6 mt-2">
-        <p
-          className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
-        >
-          {String(price)} 円
-        </p>
-        <p
-          className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
-        >
-         1{unit}あたり {String(kcal)} kcal
-        </p>
+          <p
+            className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
+          >
+            {String(price)} 円
+          </p>
+          <p
+            className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
+          >
+            1{unit}あたり {String(kcal)} kcal
+          </p>
         </div>
 
         <div className="flex justify-end gap-4 mt-5">
-        {link ? (
-              <Link rel="noopener noreferrer" target="_blank" href={link} aria-label="このおみやげを製造している会社のWebサイトを開く">
-                {" "}
-                <FaExternalLinkAlt size="30px" />{" "}
-              </Link>
-            ) : (
-              ""
-            )}
-</div>
+          {link ? (
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href={link}
+              aria-label="このおみやげを製造している会社のWebサイトを開く"
+            >
+              {" "}
+              <FaExternalLinkAlt size="30px" />{" "}
+            </Link>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );
@@ -75,8 +80,8 @@ interface SouvenirItemProps {
   price: Number;
   kcal: Number;
   url: string;
-  link:string;
-  unit:string;
+  link: string;
+  unit: string;
 }
 
 export default souvenirItem;

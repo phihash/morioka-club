@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "盛岡のイベントについて紹介します!",
   openGraph: {
     title: "もりおかクラブ | イベント",
-    description:  "盛岡のイベントについて紹介します!",
+    description: "盛岡のイベントについて紹介します!",
     url: "https://morioka.club/event",
     siteName: "もりおかクラブ | イベント",
     locale: "ja_JP",

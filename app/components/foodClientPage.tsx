@@ -21,9 +21,8 @@ const FoodClientPage = memo(() => {
     "スイーツ",
     "麺類",
   ];
-  const [selectedFoodCategories, setSelectedFoodCategories] = useState<
-    string[]
-  >(foodButtonNames);
+  const [selectedFoodCategories, setSelectedFoodCategories] =
+    useState<string[]>(foodButtonNames);
 
   const handleAllFoodCategory = () => {
     if (!selectedFoodCategories.length) {
@@ -32,30 +31,33 @@ const FoodClientPage = memo(() => {
       setSelectedFoodCategories([]);
     }
   };
-  const isOpen = (restaurant : FoodItemProps): boolean => {
+  const isOpen = (restaurant: FoodItemProps): boolean => {
     const now = new Date();
-  const day = now.toLocaleDateString("ja-JP", { weekday: "long" });
+    const day = now.toLocaleDateString("ja-JP", { weekday: "long" });
 
-  if (!restaurant.openingHours) {
-    return false;
-  }
+    if (!restaurant.openingHours) {
+      return false;
+    }
 
-  const openingHours = restaurant.openingHours[day];
-  if (!openingHours) {
-    return false;
-  }
-  const [openTime, closeTime] = openingHours.split("〜");
-  const currentTime = now.getTime();
+    const openingHours = restaurant.openingHours[day];
+    if (!openingHours || openingHours === "" || openingHours === "休業") {
+      return false;
+    }
 
-  const [openHours, openMinutes] = openTime.split(":").map(Number);
-  const openDate = new Date(now);
-  openDate.setHours(openHours, openMinutes, 0, 0);
+    const [openTime, closeTime] = openingHours.split("〜");
+    const currentTime = now.getTime();
 
-  const [closeHours, closeMinutes] = closeTime.split(":").map(Number);
-  const closeDate = new Date(now);
-  closeDate.setHours(closeHours, closeMinutes, 0, 0);
+    const [openHours, openMinutes] = openTime.split(":").map(Number);
+    const openDate = new Date(now);
+    openDate.setHours(openHours, openMinutes, 0, 0);
 
-  return currentTime >= openDate.getTime() && currentTime <= closeDate.getTime();
+    const [closeHours, closeMinutes] = closeTime.split(":").map(Number);
+    const closeDate = new Date(now);
+    closeDate.setHours(closeHours, closeMinutes, 0, 0);
+
+    return (
+      currentTime >= openDate.getTime() && currentTime <= closeDate.getTime()
+    );
   };
   const [foodItems, setFoodItems] = useState(foodData);
   const [sortBy, setSortBy] = useState("");
@@ -98,7 +100,6 @@ const FoodClientPage = memo(() => {
         setSelectedFoodCategories(newCategories);
       }
     }
-
   };
   return (
     <div className="bg-green-700 ">
@@ -126,15 +127,14 @@ const FoodClientPage = memo(() => {
                 />
               );
             })}
-<div
-  className={`${noto_sans_jp.className} tracking-widest font-semibold border-2 border-amber-500 w-max border py-1 px-2 rounded-2xl text-xs ${
-    isOpenNow ? "bg-amber-500 text-white" : "text-amber-500"
-  } md:hover:bg-amber-100 md:hover:text-amber-500 active:bg-amber-100 cursor-pointer`}
-  onClick={() => clickFoodCategory("現在営業中")}
->
-  現在営業中
-</div>
-
+            <div
+              className={`${noto_sans_jp.className} tracking-widest font-semibold border-2 border-amber-500 w-max border py-1 px-2 rounded-2xl text-xs ${
+                isOpenNow ? "bg-amber-500 text-white" : "text-amber-500"
+              } md:hover:bg-amber-100 md:hover:text-amber-500 active:bg-amber-100 cursor-pointer`}
+              onClick={() => clickFoodCategory("現在営業中")}
+            >
+              現在営業中
+            </div>
           </div>
 
           <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
@@ -158,10 +158,11 @@ const FoodClientPage = memo(() => {
           <div className="flex flex-wrap mt-4">
             {/* アイテムエリア */}
             {foodItems.map((item, index) => {
-  if (
-    selectedFoodCategories.some((category) =>
-      item.categories.includes(category)
-    ) && (!isOpenNow || isOpen(item))
+              if (
+                selectedFoodCategories.some((category) =>
+                  item.categories.includes(category),
+                ) &&
+                (!isOpenNow || isOpen(item))
               ) {
                 return (
                   <FoodItem
@@ -202,4 +203,3 @@ interface FoodItemProps {
 }
 
 export default FoodClientPage;
-

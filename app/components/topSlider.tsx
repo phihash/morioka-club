@@ -47,17 +47,17 @@ export default function TopSlider() {
     >
       {images.map((src: string, index: number) => (
         <SwiperSlide key={index}>
-        <div className="aspect-ratio aspect-ratio-16/9">
-          <Image
-            src={images[index]}
-            width={1920}
-            height={1038}
-            alt="Slider Image"
-            sizes="(min-width: 1024px) 100vw, 60vw"
-            className="object-cover object-center"
-          />
-        </div>
-      </SwiperSlide>
+          <div className="aspect-ratio aspect-ratio-16/9">
+            <Image
+              src={images[index]}
+              width={1920}
+              height={1038}
+              alt="Slider Image"
+              sizes="(min-width: 1024px) 100vw, 60vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </SwiperSlide>
       ))}
     </Swiper>
   );

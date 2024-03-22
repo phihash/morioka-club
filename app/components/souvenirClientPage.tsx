@@ -16,13 +16,10 @@ const SouvenirPage = () => {
     "日持ちする",
     "職場用",
   ];
-  const [selectedCategories, setSelectedCategories] = useState<string[]>(
-    souvenirButtonNames
-  );
+  const [selectedCategories, setSelectedCategories] =
+    useState<string[]>(souvenirButtonNames);
 
-  const [souvenirItems, setSouvenirItems] = useState(
-    souvenirData
-  );
+  const [souvenirItems, setSouvenirItems] = useState(souvenirData);
   const handleAllSouvenirCategory = () => {
     if (!selectedCategories.length) {
       setSelectedCategories(souvenirButtonNames);
@@ -57,9 +54,7 @@ const SouvenirPage = () => {
   const handleSortByKcal = () => {
     setSortBy("Kcal");
     const sortedItems = [...souvenirItems].sort((a, b) =>
-      sortBy == "Kcal"
-        ? b.kcal - a.kcal
-        : a.kcal - b.kcal,
+      sortBy == "Kcal" ? b.kcal - a.kcal : a.kcal - b.kcal,
     );
     setSouvenirItems(sortedItems);
   };

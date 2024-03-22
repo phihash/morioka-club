@@ -12,7 +12,7 @@ const foodData = [
     recommendation: 5,
     twitter: "https://twitter.com/watashinopurin",
     openingHours: {
-      月曜日: "11:00〜18:30",
+      月曜日: "",
       火曜日: "11:00〜18:30",
       水曜日: "11:00〜18:30",
       木曜日: "11:00〜18:30",
@@ -88,7 +88,7 @@ const foodData = [
   },
   {
     dish: "ランチセットパスタ",
-    categories: ["洋食", "麺類"],
+    categories: ["洋食", "麺類","カフェ","スイーツ"],
     restaurant: "銀河堂1890 Sweets&Bakery",
     url: "https://i.gyazo.com/b1ca1eab3ffc293ead654c89f01879b7.jpg",
     comment: "コメント",

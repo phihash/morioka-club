@@ -5,9 +5,11 @@ import { noto_sans_jp } from "../fonts";
 import { useState, memo } from "react";
 import FoodButton from "../components/foodButton";
 import FoodRadioButton from "../components/foodRadioButton";
+import foodData from "../data/foodData";
 
 // eslint-disable-next-line react/display-name
 const FoodClientPage = memo(() => {
+  const [isOpenNow, setIsOpenNow] = useState(false);
   const foodButtonNames = [
     "Wifi有",
     "充電有",
@@ -30,207 +32,32 @@ const FoodClientPage = memo(() => {
       setSelectedFoodCategories([]);
     }
   };
-  const [foodItems, setFoodItems] = useState([
-    {
-      dish: "京抹茶プリン (1個)",
-      categories: ["スイーツ", "入りやすい"],
-      restaurant: "私のプリン 桜",
-      url: "https://i.gyazo.com/e7d416b9ecf5c1071425aa290e353c18.jpg",
-      comment:
-        "大阪発のプリン専門店、盛岡は東北第一号店！一般的なプリンと異なりムースのような食感でした。",
-      instagram: "https://www.instagram.com/watashinopurin/",
-      link: "https://watashinopurin.com/",
-      price: 660,
-      recommendation: 5,
-      twitter: "https://twitter.com/watashinopurin",
-    },
-    {
-      dish: "牡蠣ときのこのバター醤油パスタ",
-      categories: ["洋食"],
-      restaurant: "TRENTA",
-      url: "https://i.gyazo.com/922ce9c413bd81f9a5b152fa94e613fb.jpg",
-      comment: "東北を拠点とするイタリアンのお店。牡蠣フェアの期間限定のパスタ",
-      instagram: "https://www.instagram.com/trentahonbu/",
-      link: "https://www.trenta.co.jp/",
-      price: 1380,
-      recommendation: 3,
-      twitter: "https://twitter.com/TREnTA2021",
-    },
-    {
-      dish: "じゃじゃ麺(小盛)",
-      categories: ["和食", "麺類"],
-      restaurant: "白龍",
-      url: "https://i.gyazo.com/6e32e23b4bc04dca2033a206ab879941.jpg",
-      comment:
-        "味付け自体は薄いため、肉みそ・酢・にんにく・ラー油を用いて自分好みの味を見つけましょう。",
-      instagram: "",
-      link: "https://www.pairon.iwate.jp/",
-      price: 450,
-      recommendation: 2,
-      twitter: "https://twitter.com/officialpairong",
-    },
-    {
-      dish: "アイスティー",
-      categories: ["カフェ"],
-      restaurant: "若草文庫",
-      url: "https://i.gyazo.com/8ad7423156e13cb7d4e6a2146f117239.jpg",
-      comment: "早朝から開店している,おしゃれなカフェ。",
-      instagram: "https://www.instagram.com/cafe_wakakusabunko/",
-      link: "https://weare-bestcafe.com/wakakusabunko/",
-      price: 770,
-      recommendation: 6,
-      twitter: "",
-    },
-    {
-      dish: "ランチセットパスタ",
-      categories: ["洋食", "麺類"],
-      restaurant: "銀河堂1890 Sweets&Bakery",
-      url: "https://i.gyazo.com/b1ca1eab3ffc293ead654c89f01879b7.jpg",
-      comment: "コメント",
-      instagram: "https://www.instagram.com/gingado1890/",
-      link: "",
-      price: 1450,
-      recommendation: 4,
-      twitter: "",
-    },
-    {
-      dish: "わらじかつ定食",
-      categories: ["和食", "入りやすい"],
-      restaurant: "むら八",
-      url: "https://i.gyazo.com/d15ae02a8a3efed7e565a7e51ee7f501.jpg",
-      comment:
-        "1頭の豚から2枚しか取れない岩手県産の厳選された肉を使用した「とんかつ定食」",
-      instagram: "https://www.instagram.com/mura_hachi/",
-      link: "https://murahachi.co.jp/",
-      price: 2068,
-      recommendation: 6,
-      twitter: "https://twitter.com/katu_murahachi",
-    },
-    {
-      dish: "スティックチーズケーキ,ホットチョコ",
-      categories: ["スイーツ", "カフェ"],
-      restaurant: "４番目の珈琲店",
-      url: "https://i.gyazo.com/340c39c5dee850b2991b18ecd5f9248f.png",
-      comment: "スティックチーズケーキとホットチョコレート",
-      instagram: "",
-      link: "https://hatayacoffee.com/information/#hataya4nd",
-      price: 900,
-      recommendation: 5,
-      twitter: "",
-    },
-    {
-      dish: "よくばり天ざる",
-      categories: ["和食", "入りやすい", "麺類"],
-      restaurant: "えびすそば",
-      url: "https://i.gyazo.com/9778bd2ed3c174561e895152047a979d.jpg",
-      comment: "気軽に入店できる蕎麦屋さん",
-      instagram: "https://www.instagram.com/yebisu_soba/",
-      link: "https://yebisu-soba.com/",
-      price: 1580,
-      recommendation: 6,
-      twitter: "https://twitter.com/yebisu_soba",
-    },
+  const isOpen = (restaurant : FoodItemProps): boolean => {
+    const now = new Date();
+  const day = now.toLocaleDateString("ja-JP", { weekday: "long" });
 
-    {
-      dish: "紅茶",
-      categories: ["カフェ", "Wifi有", "充電有"],
-      restaurant: "NAGAHAMA COFFEE",
-      url: "https://i.gyazo.com/17b6a27d4f51706f62dda218c5e90260.jpg",
-      comment: "コメント",
-      instagram: "https://www.instagram.com/nagahamacoffee_moriokanishi/",
-      link: "http://www.ncafe.co.jp/",
-      price: 900,
-      recommendation: 4,
-      twitter: "https://twitter.com/NagahamaCoffee",
-    },
-    {
-      dish: "季節のタルト",
-      categories: ["カフェ", "充電有"],
-      restaurant: "Cafe Bar West38",
-      url: "https://i.gyazo.com/dc9ac3e7d893ebc32f1a5cdc033fbdec.jpg",
-      comment:
-        "さつまいもを使用した季節のタルトとアイスティーのセット。季節のタルト定期的に変わります。",
-      instagram: "https://www.instagram.com/p/CjQX4wMNd3w/",
-      link: "https://akiyoshi-jazz.com/west38/",
-      price: 1100,
-      recommendation: 3,
-      twitter: "",
-    },
-    {
-      dish: "寿司",
-      categories: ["和食", "海鮮"],
-      restaurant: "清次郎",
-      url: "https://i.gyazo.com/cd22300a3db30a141b2ba1e80c6294ef.jpg",
-      comment: "フェザン店のランチメニュー「日替わり 大漁12貫ランチ」",
-      instagram: "",
-      link: "http://seijiro.jp/",
-      price: 2178,
-      recommendation: 6,
-      twitter: "https://twitter.com/seijiro1101",
-    },
-    {
-      dish: "バナナ ピスタチオ",
-      categories: ["カフェ"],
-      restaurant: "𝐝𝐢𝐠𝐞𝐥𝐚(ディジェーラ)",
-      url: "https://i.gyazo.com/72d1c9c61827a73a0aa269d1740518e5.jpg",
-      comment: "北上川沿いの木伏に店舗を構えるジェラート店",
-      instagram: "https://www.instagram.com/digela_morioka/",
-      link: "https://weare-bestcafe.com/wakakusabunko/",
-      price: 650,
-      recommendation: 4,
-      twitter: "",
-    },
-    {
-      dish: "つけ麺 並盛",
-      categories: ["麺類"],
-      restaurant: "つけ麺 和",
-      url: "https://i.gyazo.com/95a1b976ee6f8adf1d0387a625567388.jpg",
-      comment: "麺は2種類の小麦粉を使用し、濃厚なスープと絡んで美味!",
-      instagram: "https://www.instagram.com/kazu_morioka.fezan/",
-      link: "",
-      price: 1200,
-      recommendation: 5,
-      twitter: "https://twitter.com/kazu_morioka",
-    },
-    {
-      dish: "ミルクコーヒー バニラと黒ごまアイス",
-      categories: ["カフェ", "スイーツ"],
-      restaurant: "茶廊 車門",
-      url: "https://i.gyazo.com/439357c263e9b2668ee33f0ac3b8fe5f.jpg",
-      comment: "レトロな雰囲気のカフェ",
-      instagram: "",
-      link: "",
-      price: 1010,
-      recommendation: 3,
-      twitter: "",
-    },
-    {
-      dish: "わらびもち(5個)",
-      categories: ["スイーツ", "入りやすい"],
-      restaurant: "甘味処鎌倉",
-      url: "https://i.gyazo.com/bf6a42b53622fff047431bceb90e50ae.jpg",
-      comment: "わらびドリンクも美味しい。黒蜜は別売り(120円)でした",
-      instagram: "https://www.instagram.com/kamakura.cafe/",
-      link: "https://www.warabimochi-kamakura.com/",
-      price: 820,
-      recommendation: 4,
-      twitter:
-        "https://twitter.com/kamakura_warabi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
-    },
-    {
-      dish: "海鮮ちらし",
-      categories: ["和食", "海鮮"],
-      restaurant: "磯乃",
-      url: "https://i.gyazo.com/29463dd3092c3858e4aa56c9549b4305.jpg",
-      comment:
-        "新鮮な魚介が美味しい海鮮ちらし、とびっこのぷちぷちした食感がたまりません。",
-      instagram: "",
-      link: "https://hideyoshi-inc.com/isono/",
-      price: 1298,
-      recommendation: 4,
-      twitter: "",
-    },
-  ]);
+  if (!restaurant.openingHours) {
+    return false;
+  }
+
+  const openingHours = restaurant.openingHours[day];
+  if (!openingHours) {
+    return false;
+  }
+  const [openTime, closeTime] = openingHours.split("〜");
+  const currentTime = now.getTime();
+
+  const [openHours, openMinutes] = openTime.split(":").map(Number);
+  const openDate = new Date(now);
+  openDate.setHours(openHours, openMinutes, 0, 0);
+
+  const [closeHours, closeMinutes] = closeTime.split(":").map(Number);
+  const closeDate = new Date(now);
+  closeDate.setHours(closeHours, closeMinutes, 0, 0);
+
+  return currentTime >= openDate.getTime() && currentTime <= closeDate.getTime();
+  };
+  const [foodItems, setFoodItems] = useState(foodData);
   const [sortBy, setSortBy] = useState("");
   const handleSortByLowPrice = () => {
     setSortBy("Low");
@@ -257,15 +84,21 @@ const FoodClientPage = memo(() => {
   };
 
   const clickFoodCategory = (categoryName: string) => {
-    const index = selectedFoodCategories.indexOf(categoryName);
-
-    if (index === -1) {
-      setSelectedFoodCategories([...selectedFoodCategories, categoryName]);
+    if (categoryName === "現在営業中") {
+      setIsOpenNow(!isOpenNow);
     } else {
-      const newCategories = [...selectedFoodCategories];
-      newCategories.splice(index, 1);
-      setSelectedFoodCategories(newCategories);
+      // 他のカテゴリの処理
+      const index = selectedFoodCategories.indexOf(categoryName);
+
+      if (index === -1) {
+        setSelectedFoodCategories([...selectedFoodCategories, categoryName]);
+      } else {
+        const newCategories = [...selectedFoodCategories];
+        newCategories.splice(index, 1);
+        setSelectedFoodCategories(newCategories);
+      }
     }
+
   };
   return (
     <div className="bg-green-700 ">
@@ -282,6 +115,7 @@ const FoodClientPage = memo(() => {
                 selectedFoodCategories.length == foodButtonNames.length,
               )} // カテゴリ全選択じゃないと色つけさせないようにするため
             />
+
             {foodButtonNames.map((foodButtonName, index) => {
               return (
                 <FoodButton
@@ -292,6 +126,15 @@ const FoodClientPage = memo(() => {
                 />
               );
             })}
+<div
+  className={`${noto_sans_jp.className} tracking-widest font-semibold border-2 border-amber-500 w-max border py-1 px-2 rounded-2xl text-xs ${
+    isOpenNow ? "bg-amber-500 text-white" : "text-amber-500"
+  } md:hover:bg-amber-100 md:hover:text-amber-500 active:bg-amber-100 cursor-pointer`}
+  onClick={() => clickFoodCategory("現在営業中")}
+>
+  現在営業中
+</div>
+
           </div>
 
           <h3 className={`${noto_sans_jp.className} px-3 font-semibold mt-6 `}>
@@ -315,10 +158,10 @@ const FoodClientPage = memo(() => {
           <div className="flex flex-wrap mt-4">
             {/* アイテムエリア */}
             {foodItems.map((item, index) => {
-              if (
-                selectedFoodCategories.some((category) =>
-                  item.categories.includes(category),
-                )
+  if (
+    selectedFoodCategories.some((category) =>
+      item.categories.includes(category)
+    ) && (!isOpenNow || isOpen(item))
               ) {
                 return (
                   <FoodItem
@@ -331,6 +174,7 @@ const FoodClientPage = memo(() => {
                     link={item.link}
                     price={item.price}
                     twitter={item.twitter}
+                    openingHours={item.openingHours}
                   ></FoodItem>
                 );
               }
@@ -343,4 +187,19 @@ const FoodClientPage = memo(() => {
   );
 });
 
+interface FoodItemProps {
+  dish: string;
+  restaurant: string;
+  url: string;
+  comment: string;
+  instagram: string;
+  link: string;
+  price: Number;
+  twitter: string;
+  openingHours: {
+    [day: string]: string;
+  };
+}
+
 export default FoodClientPage;
+

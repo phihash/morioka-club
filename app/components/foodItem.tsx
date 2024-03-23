@@ -52,23 +52,25 @@ const foodItem: React.FC<FoodItemProps> = memo(
             >
               {String(price)} 円
             </p>
-            {
-              openingHours[new Date().toLocaleString("ja-JP", { weekday: "long" })] ? <p
-              className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
-            >
-              {new Date().toLocaleString("ja-JP", { weekday: "long" }) +
-                ": " +
-                openingHours[
-                  new Date().toLocaleString("ja-JP", { weekday: "long" })
-                ]}
-            </p> : <p
-              className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
-
-            >定休日</p>
-
-            }
-
-
+            {openingHours[
+              new Date().toLocaleString("ja-JP", { weekday: "long" })
+            ] ? (
+              <p
+                className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
+              >
+                {new Date().toLocaleString("ja-JP", { weekday: "long" }) +
+                  ": " +
+                  openingHours[
+                    new Date().toLocaleString("ja-JP", { weekday: "long" })
+                  ]}
+              </p>
+            ) : (
+              <p
+                className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
+              >
+                定休日
+              </p>
+            )}
           </div>
           <div className="flex justify-end gap-4 mt-5">
             {link ? (

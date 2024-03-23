@@ -44,9 +44,10 @@ const FacilityPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                北上川にかかる橋。
+                盛岡の大通の入り口に建てられ、
+                1〜2階がショップフロアとなり、産直売り場「賢治の大地館」にて岩手産の食品や農作物等が販売されている。
                 <br />
-                別名は二度泣き橋と呼ばれている。
+                2階にはアパレルショップと100円ショップセリア、道路側には飲食店が入居している。
               </p>
             </div>
             <div className="md:w-1/2">
@@ -136,7 +137,7 @@ const FacilityPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                ファッション、雑貨、サービスはもちろん、岩手の魅力がたくさん詰まった食料品、お土産、レストランなど、160の専門店が一堂に集結した盛岡駅直結の商業施設です。
+                盛岡市にある百貨店
                 <br />
               </p>
             </div>
@@ -144,17 +145,17 @@ const FacilityPage = () => {
           {/* くぎり */}
           <div className="mt-20 flex flex-col-reverse md:flex-row">
             <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
-              <Link
-                href="https://moss-build.com/"
-                rel="noopener noreferrer"
-                target="_blank"
+              <h2
+                className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
               >
-                <h2
-                  className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
+                <Link
+                  href="https://moss-build.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                  MOSS
-                </h2>
-              </Link>
+                  <span className="hover:text-yellow-500">MOSS</span>
+                </Link>
+              </h2>
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >

@@ -285,7 +285,7 @@ const foodData = [
     url: "https://i.gyazo.com/439357c263e9b2668ee33f0ac3b8fe5f.jpg",
     comment: "レトロな雰囲気のカフェ",
     instagram: "",
-    link: "",
+    link: "https://www.google.com/search?q=%E8%8C%B6%E5%BB%8A%E8%BB%8A%E9%96%80",
     price: 1010,
     recommendation: 3,
     twitter: "",

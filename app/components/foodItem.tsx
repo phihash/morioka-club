@@ -41,11 +41,11 @@ const foodItem: React.FC<FoodItemProps> = memo(
             {dish}
           </h2>
 
-          <p
+          {/* <p
             className={`${zen_maru_gothic.className}  leading-relaxed text-gray-600 text-base mb-1`}
           >
             {comment}
-          </p>
+          </p> */}
           <div className="flex gap-6 mt-2">
             <p
               className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}

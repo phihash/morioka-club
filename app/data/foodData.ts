@@ -310,7 +310,7 @@ const foodData = [
     price: 820,
     recommendation: 6,
     twitter:
-      "https://twitter.com/kamakura_warabi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+      "https://twitter.com/kamakura_warabi",
       openingHours: {
         月曜日: "10:00〜18:00",
         火曜日: "10:00〜18:00",
@@ -319,6 +319,28 @@ const foodData = [
         金曜日: "10:00〜18:00",
         土曜日: "10:00〜18:00",
         日曜日: "10:00〜18:00",
+      },
+  },
+  {
+    dish: "選べるプレート",
+    categories: ["洋食","スイーツ"],
+    restaurant: "みのるダイニング",
+    url: "/images/food10.jpg",
+    comment: "コメント",
+    instagram: "https://www.instagram.com/minoru_junjo/",
+    link: "https://www.minoriminoru.jp/morioka",
+    price: 1639,
+    recommendation: 7,
+    twitter:
+      "https://twitter.com/minoriminoru_pj",
+      openingHours: {
+        月曜日: "11:00〜21:30",
+        火曜日: "11:00〜21:30",
+        水曜日: "11:00〜21:30",
+        木曜日: "11:00〜21:30",
+        金曜日: "11:00〜21:30",
+        土曜日: "11:00〜21:30",
+        日曜日: "11:00〜21:30",
       },
   },
   {

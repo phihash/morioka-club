@@ -137,7 +137,7 @@ const FacilityPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                盛岡市にある百貨店
+                盛岡市にある老舗百貨店
                 <br />
               </p>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { noto_sans_jp, zen_maru_gothic } from "../fonts";
+import { noto_sans_jp } from "../fonts";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";

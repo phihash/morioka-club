@@ -4,10 +4,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://morioka.club/spot"),
   title: "もりおかクラブ | 観光スポット",
-  description: "盛岡周辺の主な観光スポットを紹介しています!",
+  description: "歴史を感じるスポットや自然豊かな公園など、魅力あふれる盛岡周辺のおすすめ観光スポットを紹介します!",
   openGraph: {
     title: "もりおかクラブ | 観光スポット",
-    description: "盛岡周辺の主な観光スポットを紹介しています!",
+  description: "歴史を感じるスポットや自然豊かな公園など、魅力あふれる盛岡周辺のおすすめ観光スポットを紹介します!",
     url: "https://morioka.club/spot",
     siteName: "もりおかクラブ | 観光スポット",
     locale: "ja_JP",

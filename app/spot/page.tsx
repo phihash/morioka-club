@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     {
       rel: "apple-touch-icon",
       sizes: "180x180",
-      url: "/public/icon.png",
+      url: "/icon.png",
     },
   ],
 };

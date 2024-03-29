@@ -14,7 +14,7 @@ const SpotPage = () => {
               <Image
                 className="rounded-xl w-full mb-4"
                 src="https://i.gyazo.com/1ed22f890de885b247c062d240494bec.jpg"
-                alt="岩手銀行赤レンガ館の写真"
+                alt="晴れた空と正面から見た岩手銀行赤レンガ館の写真"
                 width={600}
                 height={800}
               />
@@ -57,7 +57,7 @@ const SpotPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/58b6479503844803e0ec81adf8d7a64a.jpg"
-                alt="開運橋の写真"
+                alt="北上川にかかる開運橋の写真、時間帯は昼間"
                 width={600}
                 height={800}
               />
@@ -70,7 +70,7 @@ const SpotPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/a689a9fef3a11a2ed417f9eecbff6a73.jpg"
-                alt="写真"
+                alt="正面から見た風情が溢れる南昌荘の写真"
                 width={600}
                 height={800}
               />
@@ -110,7 +110,7 @@ const SpotPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/1c8477bf6e4f76febcdaa32636799a87.jpg"
-                alt="写真"
+                alt="冬の盛岡城跡公園の落ち着いた景色の写真"
                 width={600}
                 height={800}
               />
@@ -123,7 +123,7 @@ const SpotPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/47e10e10c4a9845552be1dc74365abb9.jpg"
-                alt="御田屋清水の写真"
+                alt="静かに水が流れる御田屋清水の写真"
                 width={600}
                 height={800}
               />
@@ -161,7 +161,7 @@ const SpotPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="/images/spot3.jpg"
-                alt=" 新渡戸稲造先生の像の写真"
+                alt="威厳のある新渡戸稲造先生の像の写真"
                 width={600}
                 height={800}
               />
@@ -173,7 +173,7 @@ const SpotPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/1289e174dc6da810734d8ab12281f1d3.jpg"
-                alt="盛岡八幡宮の写真"
+                alt="美しい朱塗りの盛岡八幡宮の写真"
                 width={600}
                 height={800}
               />

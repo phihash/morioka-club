@@ -14,7 +14,7 @@ const FacilityPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/a2d845d90ec71197f21acbcd0cd9216e.jpg"
-                alt="写真"
+                alt="盛岡駅ビルフェザンの写真"
                 width={600}
                 height={800}
               />
@@ -54,7 +54,7 @@ const FacilityPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/dc4cbdd6df2d21ef8f9eb94237163c51.png"
-                alt="写真"
+                alt="クロステラス盛岡の写真"
                 width={600}
                 height={800}
               />
@@ -66,7 +66,7 @@ const FacilityPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/3bdf8089597443ec7f7429287e2888ad.png"
-                alt="写真"
+                alt="盛岡バスセンターの写真"
                 width={600}
                 height={800}
               />
@@ -86,7 +86,7 @@ const FacilityPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                ファッション、雑貨、サービスはもちろん、岩手の魅力がたくさん詰まった食料品、お土産、レストランなど、160の専門店が一堂に集結した盛岡駅直結の商業施設です。
+                バスターミナルだけでなく、飲食店,カフェやホテルも充実した施設。
                 <br />
               </p>
             </div>
@@ -111,7 +111,7 @@ const FacilityPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/84483389b4c0f0f3678f784b28fe6676.jpg"
-                alt="写真"
+                alt="建設中のmonakaの写真"
                 width={600}
                 height={800}
               />
@@ -123,7 +123,7 @@ const FacilityPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png"
-                alt="写真"
+                alt="川徳百貨店の写真"
                 width={600}
                 height={800}
               />
@@ -150,7 +150,7 @@ const FacilityPage = () => {
               >
                 <Link
                   href="https://moss-build.com/"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer external"
                   target="_blank"
                 >
                   <span className="hover:text-yellow-500">MOSS</span>
@@ -170,7 +170,7 @@ const FacilityPage = () => {
               <Image
                 className="rounded-xl w-full  mb-4"
                 src="https://i.gyazo.com/c7fd9dc5b6a345b321b34946e0bdfc5b.jpg"
-                alt="写真"
+                alt="MOSSの写真"
                 width={600}
                 height={800}
               />

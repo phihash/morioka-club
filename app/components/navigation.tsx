@@ -7,6 +7,7 @@ import { IoFastFood, IoGift } from "react-icons/io5";
 import { MdPlace, MdLightMode } from "react-icons/md";
 import { FaRegBuilding } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
+import { MdOutlineFormatAlignLeft } from "react-icons/md";
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -60,6 +61,17 @@ const Navigation = () => {
           >
             <GiNotebook size={22} />
             体験記
+          </div>
+        </Link>
+        <Link href="https://forms.gle/MaLsb7jxoWMyRQ1V6"
+        rel="noopener noreferrer external"
+        target="_blank">
+          <div
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2  `}
+          >
+            <MdOutlineFormatAlignLeft size={22} />
+            {/* <GiNotebook size={22} /> */}
+            問い合わせ
           </div>
         </Link>
       </div>

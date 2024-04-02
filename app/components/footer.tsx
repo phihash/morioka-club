@@ -61,6 +61,16 @@ export default function Footer() {
                 体験記
               </div>
             </Link>
+            <Link href="https://forms.gle/MaLsb7jxoWMyRQ1V6"
+        rel="noopener noreferrer external"
+        target="_blank">
+              <div
+                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider`}
+              >
+            問い合わせ
+
+              </div>
+            </Link>
           </div>
           {/* <hr className="h-px my-6 bg-white border-0 dark:bg-white" /> */}
           <p

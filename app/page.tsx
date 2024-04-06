@@ -24,14 +24,14 @@ export default function Home() {
             </p>
           </div>
 
-          {/* <div className="md:pt-24 md:pb-18 px-2 py-12">
+          <div className="md:pt-24 md:pb-18 px-2 py-12">
             <h2
               className={`${lexend.className} text-3xl font-bold text-cyan-800 pb-8`}
             >
               News
             </h2>
             <NewsTitleItem />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

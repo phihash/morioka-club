@@ -9,12 +9,12 @@ const NewsTitleItem = () => {
           <p className={`text-slate-500 md:pr-8 pr-3 ${lexend.className}`}>
             2024.04.01
           </p>
-          <p className=" font-bold text-yellow-900"> 観光スポット</p>
+          <p className=" font-bold text-yellow-900"> イベント</p>
         </div>
         <p
           className={`${noto_sans_jp.className}  md:text-lg text-base font-semibold pt-6`}
         >
-          石割桜がもうすぐ見頃の時期です
+          材木町でよ市が始まりました
         </p>
       </div>
       <hr className="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />

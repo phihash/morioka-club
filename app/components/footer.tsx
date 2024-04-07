@@ -3,8 +3,6 @@ import Link from "next/link";
 import { zen_maru_gothic, lexend } from "../fonts";
 import { usePathname } from "next/navigation";
 
-// import { useState } from "react";
-
 export default function Footer() {
   const pathname = usePathname();
   return (
@@ -40,13 +38,7 @@ export default function Footer() {
                 観光スポット
               </div>
             </Link>
-            <Link href="/event">
-              <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/event" ? "border-b-4 border-white pb-2" : ""}`}
-              >
-                イベント
-              </div>
-            </Link>
+
             <Link href="/facility">
               <div
                 className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/facility" ? "border-b-4 border-white pb-2" : ""}`}
@@ -54,11 +46,11 @@ export default function Footer() {
                 商業施設
               </div>
             </Link>
-            <Link href="/diary">
+            <Link href="/report">
               <div
                 className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/diary" ? "border-b-4 border-white pb-2" : ""}`}
               >
-                体験記
+                レポート
               </div>
             </Link>
             <Link href="https://forms.gle/MaLsb7jxoWMyRQ1V6"

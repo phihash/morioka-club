@@ -36,9 +36,9 @@ const ReportPage = async () => {
         </div>
           {reports.map((report : Report) => {
           return  <Link href={`report/${report.id}`} key={report.id}>
-            <div className="flex md:gap-12 gap-6 md:w-3/4 w-5/6 mx-auto p-4 items-center">
-            <p className={` ${zen_maru_gothic.className} md:text-xl text-lg font-semibold`}>{report.date.split('T')[0]}</p>
-            <p className={`text-yellow-900 ${zen_maru_gothic.className} md:text-2xl text-lg font-semibold`}>{report.title}</p>
+            <div className="flex md:gap-12 gap-6 md:w-3/4 w-11/12 mx-auto p-4 items-center">
+            <p className={` ${zen_maru_gothic.className} md:text-xl text-xs font-semibold`}>{report.date.split('T')[0]}</p>
+            <p className={`text-yellow-900 ${zen_maru_gothic.className} md:text-2xl text-base font-semibold`}>{report.title}</p>
             </div>
 
           </Link>

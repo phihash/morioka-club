@@ -34,30 +34,29 @@ const FoodClientPage = memo(() => {
   const isOpen = (restaurant: FoodItemProps): boolean => {
     const now = new Date();
     const day = now.toLocaleDateString("ja-JP", { weekday: "long" });
-
-    if (!restaurant.openingHours) {
-      return false;
-    }
-
-    const openingHours = restaurant.openingHours[day];
-    if (!openingHours || openingHours === "" || openingHours === "休業") {
-      return false;
-    }
-
-    const [openTime, closeTime] = openingHours.split("〜");
     const currentTime = now.getTime();
 
-    const [openHours, openMinutes] = openTime.split(":").map(Number);
-    const openDate = new Date(now);
-    openDate.setHours(openHours, openMinutes, 0, 0);
+    if (!restaurant.openingHours || !restaurant.openingHours[day]) {
+      return false;
+    }
 
-    const [closeHours, closeMinutes] = closeTime.split(":").map(Number);
-    const closeDate = new Date(now);
-    closeDate.setHours(closeHours, closeMinutes, 0, 0);
+    const openingHoursArray = restaurant.openingHours[day].split(",");
+    for (const openingHours of openingHoursArray) {
+      const [openTime, closeTime] = openingHours.split("〜");
+      const [openHours, openMinutes] = openTime.split(":").map(Number);
+      const openDate = new Date(now);
+      openDate.setHours(openHours, openMinutes, 0, 0);
 
-    return (
-      currentTime >= openDate.getTime() && currentTime <= closeDate.getTime()
-    );
+      const [closeHours, closeMinutes] = closeTime.split(":").map(Number);
+      const closeDate = new Date(now);
+      closeDate.setHours(closeHours, closeMinutes, 0, 0);
+
+      if (currentTime >= openDate.getTime() && currentTime <= closeDate.getTime()) {
+        return true;
+      }
+    }
+
+    return false;
   };
   const [foodItems, setFoodItems] = useState(foodData);
   const [sortBy, setSortBy] = useState("");

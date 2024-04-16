@@ -1,5 +1,27 @@
 const foodData = [
   {
+    dish: "STREET BURGER",
+    categories: ["洋食"],
+    restaurant: "STREET BURGER",
+    url: "/images/food13.jpg",
+    comment:
+      "",
+    instagram: "https://www.instagram.com/streetburger_official/",
+    link: "https://moriokayokocho.com/shop/s09/",
+    price: 1300,
+    recommendation: 7,
+    twitter: "https://twitter.com/STREETBURGER019",
+    openingHours: {
+      月曜日: "11:00〜15:00,17:00〜21:00",
+      火曜日: "11:00〜15:00,17:00〜21:00",
+      水曜日: "11:00〜15:00,17:00〜21:00",
+      木曜日: "11:00〜15:00,17:00〜21:00",
+      金曜日: "11:00〜15:00,17:00〜21:00",
+      土曜日: "11:00〜21:00",
+      日曜日: "11:00〜21:00",
+    },
+  },
+  {
     dish: "京抹茶プリン (1個)",
     categories: ["スイーツ", "入りやすい"],
     restaurant: "私のプリン 桜",

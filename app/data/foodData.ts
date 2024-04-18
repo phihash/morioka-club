@@ -161,7 +161,7 @@ const foodData = [
     instagram: "https://www.instagram.com/gingado1890/",
     link: "",
     price: 1450,
-    recommendation: 5,
+    recommendation: 7,
     twitter: "",
     openingHours: {
       月曜日: "9:00〜21:30",
@@ -366,6 +366,28 @@ const foodData = [
     },
   },
   {
+    dish: "チーズケーキセット",
+    categories: ["カフェ","スイーツ"],
+    restaurant: "NOTE",
+    url: "/images/food15.jpg",
+    comment: "コメント",
+    instagram: "https://www.instagram.com/note_kumagai/",
+    link: "",
+    price: 600,
+    recommendation: 7,
+    twitter:
+      "",
+      openingHours: {
+        月曜日: "12:00〜20:00",
+        火曜日: "",
+        水曜日: "12:00〜20:00",
+        木曜日: "12:00〜20:00",
+        金曜日: "12:00〜20:00",
+        土曜日: "12:00〜20:00",
+        日曜日: "12:00〜20:00",
+      },
+  },
+  {
     dish: "わらびもち(5個)",
     categories: ["スイーツ", "入りやすい"],
     restaurant: "甘味処鎌倉",
@@ -431,6 +453,30 @@ const foodData = [
       日曜日: "11:00〜21:30",
     },
   },
+  {
+    dish: "浅沼養鶏場の卵と白金豚ベーコンのカルボナーラ",
+    categories: ["洋食","麺類"],
+    restaurant: "FRESCHISSIMA フレスキッシマ",
+    url: "/images/food14.jpg",
+    comment: "コメント",
+    instagram: "https://www.instagram.com/freschissima_morioka/",
+    link: "http://www.ariv.co.jp/freschissima.php",
+    price: 1320,
+    recommendation: 6,
+    twitter:
+      "",
+      openingHours: {
+        月曜日: "11:00〜21:30",
+        火曜日: "11:00〜21:30",
+        水曜日: "11:00〜21:30",
+        木曜日: "11:00〜21:30",
+        金曜日: "11:00〜21:30",
+        土曜日: "11:00〜21:30",
+        日曜日: "11:00〜21:30",
+      },
+  },
+
+
 ]
 
 export default foodData;

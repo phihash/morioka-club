@@ -217,6 +217,30 @@ const SpotPage = () => {
               />
             </div>
           </div>
+          {/* くぎり */}
+          <div className="mt-10 md:flex">
+            <div className="md:w-1/2">
+              <Image
+                className="rounded-xl w-full  mb-4"
+                src="/images/spot6.jpg"
+                alt="美しい朱塗りの盛岡八幡宮の写真"
+                width={600}
+                height={800}
+              />
+            </div>
+            <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
+              <h2
+                className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
+              >
+                盛岡天満宮
+              </h2>
+              <p
+                className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
+              >
+                盛岡天満宮は、学問の神、菅原道真公を祀っている神社であり、とてもユニークな狛犬が鎮座している。
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

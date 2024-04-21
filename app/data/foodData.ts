@@ -324,6 +324,28 @@ const foodData = [
     },
   },
   {
+    dish: "ローストビーフ丼",
+    categories: ["カフェ","スイーツ","洋食"],
+    restaurant: "SAIEN COFFEE",
+    url: "/images/food16.jpg",
+    comment: "コメント",
+    instagram: "https://www.instagram.com/saiencoffee/",
+    link: "",
+    price: 1045,
+    recommendation: 8,
+    twitter:
+      "",
+      openingHours: {
+        月曜日: "11:00〜16:30,17:00~23:00",
+        火曜日: "11:00〜16:30,17:00~23:00",
+        水曜日: "11:00〜16:30,17:00~23:00",
+        木曜日: "11:00〜16:30,17:00~23:00",
+        金曜日: "11:00〜16:30,17:00~23:00",
+        土曜日: "11:00〜16:30,17:00~23:00",
+        日曜日: "",
+      },
+  },
+  {
     dish: "つけ麺 並盛",
     categories: ["麺類"],
     restaurant: "つけ麺 和",

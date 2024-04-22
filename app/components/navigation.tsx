@@ -39,14 +39,6 @@ const Navigation = () => {
             観光スポット
           </div>
         </Link>
-        {/* <Link href="/event">
-          <div
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-3 py-3  w-max flex  items-center gap-2  ${pathname == "/event" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
-          >
-            <MdLightMode size={22} />
-            イベント
-          </div>
-        </Link> */}
         <Link href="/facility">
           <div
             className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2  ${pathname == "/facility" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
@@ -57,7 +49,7 @@ const Navigation = () => {
         </Link>
         <Link href="/report">
           <div
-            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2 ${pathname == "/diary" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 px-4 py-3  w-max flex  items-center gap-2 ${pathname == "/report" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
           >
             <GiNotebook size={22} />
             レポート

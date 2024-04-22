@@ -48,7 +48,7 @@ export default function Footer() {
             </Link>
             <Link href="/report">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/diary" ? "border-b-4 border-white pb-2" : ""}`}
+                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/report" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 レポート
               </div>

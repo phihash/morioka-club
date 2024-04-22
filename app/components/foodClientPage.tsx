@@ -42,11 +42,12 @@ const FoodClientPage = memo(() => {
 
     const openingHoursArray = restaurant.openingHours[day].split(",");
     for (const openingHours of openingHoursArray) {
+      if (!openingHours) continue;
       const [openTime, closeTime] = openingHours.split("〜");
       const [openHours, openMinutes] = openTime.split(":").map(Number);
       const openDate = new Date(now);
       openDate.setHours(openHours, openMinutes, 0, 0);
-
+      if (!closeTime) continue;
       const [closeHours, closeMinutes] = closeTime.split(":").map(Number);
       const closeDate = new Date(now);
       closeDate.setHours(closeHours, closeMinutes, 0, 0);

@@ -13,7 +13,6 @@ const foodItem: React.FC<FoodItemProps> = memo(
     restaurant,
     url,
     contentUrl,
-    comment,
     instagram,
     link,
     price,
@@ -21,23 +20,22 @@ const foodItem: React.FC<FoodItemProps> = memo(
     openingHours,
   }) => {
     return (
-
       <div className={` lg:w-1/3 md:w-1/2 w-full p-6`}>
-
         <div className="p-2 rounded-lg">
-        <Link href={`food/${contentUrl}`}
-       rel="noopener noreferrer external"
-       className=" hover:opacity-85 cursor-pointer"
-       target="_blank"
-      >
-          <Image
-            className="h-64 rounded-xl w-full object-cover object-center mb-4"
-            src={url}
-            alt="写真"
-            width={600}
-            height={800}
-          />
-      </Link>
+          <Link
+            href={`food/${contentUrl}`}
+            rel="noopener noreferrer external"
+            className=" hover:opacity-85 cursor-pointer"
+            target="_blank"
+          >
+            <Image
+              className="h-64 rounded-xl w-full object-cover object-center mb-4"
+              src={url}
+              alt="写真"
+              width={600}
+              height={800}
+            />
+          </Link>
 
           <h3
             className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-2`}
@@ -50,12 +48,6 @@ const foodItem: React.FC<FoodItemProps> = memo(
           >
             {dish}
           </h2>
-
-          {/* <p
-            className={`${zen_maru_gothic.className}  leading-relaxed text-gray-600 text-base mb-1`}
-          >
-            {comment}
-          </p> */}
           <div className="flex gap-6 mt-2">
             <p
               className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
@@ -124,7 +116,6 @@ const foodItem: React.FC<FoodItemProps> = memo(
             )}
           </div>
         </div>
-
       </div>
     );
   },
@@ -134,8 +125,7 @@ interface FoodItemProps {
   dish: string;
   restaurant: string;
   url: string;
-  contentUrl:string;
-  comment: string;
+  contentUrl: string;
   instagram: string;
   link: string;
   price: Number;

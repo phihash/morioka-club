@@ -12,6 +12,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
     dish,
     restaurant,
     url,
+    contentUrl,
     comment,
     instagram,
     link,
@@ -20,8 +21,15 @@ const foodItem: React.FC<FoodItemProps> = memo(
     openingHours,
   }) => {
     return (
-      <div className={`hover:opacity-85 cursor-pointer lg:w-1/3 md:w-1/2 w-full p-6`}>
+
+      <div className={` lg:w-1/3 md:w-1/2 w-full p-6`}>
+
         <div className="p-2 rounded-lg">
+        <Link href={`food/${contentUrl}`}
+       rel="noopener noreferrer external"
+       className=" hover:opacity-85 cursor-pointer"
+       target="_blank"
+      >
           <Image
             className="h-64 rounded-xl w-full object-cover object-center mb-4"
             src={url}
@@ -29,6 +37,8 @@ const foodItem: React.FC<FoodItemProps> = memo(
             width={600}
             height={800}
           />
+      </Link>
+
           <h3
             className={`${noto_sans_jp.className} tracking-widest text-green-600 text-sm font-semibold mb-2`}
           >
@@ -114,6 +124,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
             )}
           </div>
         </div>
+
       </div>
     );
   },
@@ -123,6 +134,7 @@ interface FoodItemProps {
   dish: string;
   restaurant: string;
   url: string;
+  contentUrl:string;
   comment: string;
   instagram: string;
   link: string;

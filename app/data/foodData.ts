@@ -4,6 +4,7 @@ const foodData = [
     categories: ["洋食"],
     restaurant: "STREET BURGER",
     url: "/images/food13.jpg",
+    contentUrl:"wdur97-nf",
     comment:
       "",
     instagram: "https://www.instagram.com/streetburger_official/",
@@ -26,6 +27,7 @@ const foodData = [
     categories: ["スイーツ", "入りやすい"],
     restaurant: "私のプリン 桜",
     url: "https://i.gyazo.com/e7d416b9ecf5c1071425aa290e353c18.jpg",
+    contentUrl:"",
     comment:
       "大阪発のプリン専門店、盛岡は東北第一号店！一般的なプリンと異なりムースのような食感でした。",
     instagram: "https://www.instagram.com/watashinopurin/",
@@ -48,6 +50,7 @@ const foodData = [
     categories: ["スイーツ", "充電有","カフェ"],
     restaurant: "cafe Hanamori",
     url: "/images/food12.jpg",
+    contentUrl:"",
     comment:
       "甘酸っぱくて、濃厚なチョコが美味しいフォンダンでした",
     instagram: "https://www.instagram.com/cafehanamori_moriokasaienten/",
@@ -70,6 +73,8 @@ const foodData = [
     categories: ["麺類", "入りやすい"],
     restaurant: "冷麺専門店冷麺ダイニングつるしこ",
     url: "/images/food9.jpg",
+    contentUrl:"",
+
     comment:
       "ほろほろとした牛肉と温かいスープに絡んだ麺が美味しい。冬にぜひ",
     instagram: "https://www.instagram.com/reimendiningtsurushiko/",
@@ -92,6 +97,8 @@ const foodData = [
     categories: ["スイーツ","カフェ"],
     restaurant: "Mi Cafeto",
     url: "/images/food11.jpg",
+    contentUrl:"",
+
     comment:
       "かすかに甘くて飲みやすいコーヒーでした",
     instagram: "https://www.instagram.com/micafeto.morioka/",
@@ -114,6 +121,8 @@ const foodData = [
     categories: ["和食", "麺類"],
     restaurant: "白龍",
     url: "https://i.gyazo.com/6e32e23b4bc04dca2033a206ab879941.jpg",
+    contentUrl:"",
+
     comment:
       "味付け自体は薄いため、肉みそ・酢・にんにく・ラー油を用いて自分好みの味を見つけましょう。",
     instagram: "",
@@ -136,6 +145,8 @@ const foodData = [
     categories: ["カフェ","スイーツ","Wifi有"],
     restaurant: "若草文庫",
     url: "https://i.gyazo.com/8ad7423156e13cb7d4e6a2146f117239.jpg",
+    contentUrl:"",
+
     comment: "早朝から開店している,おしゃれなカフェ。",
     instagram: "https://www.instagram.com/cafe_wakakusabunko/",
     link: "https://weare-bestcafe.com/wakakusabunko/",
@@ -157,6 +168,8 @@ const foodData = [
     categories: ["洋食", "麺類","カフェ","スイーツ"],
     restaurant: "銀河堂1890 Sweets&Bakery",
     url: "https://i.gyazo.com/b1ca1eab3ffc293ead654c89f01879b7.jpg",
+    contentUrl:"",
+
     comment: "コメント",
     instagram: "https://www.instagram.com/gingado1890/",
     link: "",
@@ -178,6 +191,8 @@ const foodData = [
     categories: ["和食", "入りやすい"],
     restaurant: "むら八",
     url: "https://i.gyazo.com/d15ae02a8a3efed7e565a7e51ee7f501.jpg",
+    contentUrl:"",
+
     comment:
       "1頭の豚から2枚しか取れない岩手県産の厳選された肉を使用した「とんかつ定食」",
     instagram: "https://www.instagram.com/mura_hachi/",
@@ -200,6 +215,8 @@ const foodData = [
     categories: ["スイーツ", "カフェ"],
     restaurant: "４番目の珈琲店",
     url: "https://i.gyazo.com/340c39c5dee850b2991b18ecd5f9248f.png",
+    contentUrl:"",
+
     comment: "スティックチーズケーキとホットチョコレート",
     instagram: "",
     link: "https://hatayacoffee.com/information/#hataya4nd",
@@ -221,6 +238,8 @@ const foodData = [
     categories: ["和食", "入りやすい", "麺類"],
     restaurant: "えびすそば",
     url: "https://i.gyazo.com/9778bd2ed3c174561e895152047a979d.jpg",
+    contentUrl:"",
+
     comment: "気軽に入店できる蕎麦屋さん",
     instagram: "https://www.instagram.com/yebisu_soba/",
     link: "https://yebisu-soba.com/",
@@ -243,6 +262,8 @@ const foodData = [
     categories: ["カフェ", "Wifi有", "充電有"],
     restaurant: "NAGAHAMA COFFEE",
     url: "https://i.gyazo.com/17b6a27d4f51706f62dda218c5e90260.jpg",
+    contentUrl:"",
+
     comment: "コメント",
     instagram: "https://www.instagram.com/nagahamacoffee_moriokanishi/",
     link: "http://www.ncafe.co.jp/",
@@ -264,6 +285,8 @@ const foodData = [
     categories: ["カフェ", "充電有"],
     restaurant: "Cafe Bar West38",
     url: "https://i.gyazo.com/dc9ac3e7d893ebc32f1a5cdc033fbdec.jpg",
+    contentUrl:"",
+
     comment:
       "さつまいもを使用した季節のタルトとアイスティーのセット。季節のタルト定期的に変わります。",
     instagram: "https://www.instagram.com/p/CjQX4wMNd3w/",
@@ -286,6 +309,8 @@ const foodData = [
     categories: ["和食", "海鮮"],
     restaurant: "清次郎",
     url: "https://i.gyazo.com/cd22300a3db30a141b2ba1e80c6294ef.jpg",
+    contentUrl:"",
+
     comment: "フェザン店のランチメニュー「日替わり 大漁12貫ランチ」",
     instagram: "",
     link: "http://seijiro.jp/",
@@ -307,6 +332,8 @@ const foodData = [
     categories: ["カフェ"],
     restaurant: "𝐝𝐢𝐠𝐞𝐥𝐚(ディジェーラ)",
     url: "https://i.gyazo.com/72d1c9c61827a73a0aa269d1740518e5.jpg",
+    contentUrl:"",
+
     comment: "北上川沿いの木伏に店舗を構えるジェラート店",
     instagram: "https://www.instagram.com/digela_morioka/",
     link: "https://weare-bestcafe.com/wakakusabunko/",
@@ -328,6 +355,8 @@ const foodData = [
     categories: ["カフェ","スイーツ","洋食"],
     restaurant: "SAIEN COFFEE",
     url: "/images/food16.jpg",
+    contentUrl:"",
+
     comment: "コメント",
     instagram: "https://www.instagram.com/saiencoffee/",
     link: "",
@@ -350,6 +379,8 @@ const foodData = [
     categories: ["麺類"],
     restaurant: "つけ麺 和",
     url: "https://i.gyazo.com/95a1b976ee6f8adf1d0387a625567388.jpg",
+    contentUrl:"",
+
     comment: "麺は2種類の小麦粉を使用し、濃厚なスープと絡んで美味!",
     instagram: "https://www.instagram.com/kazu_morioka.fezan/",
     link: "",
@@ -371,6 +402,8 @@ const foodData = [
     categories: ["カフェ", "スイーツ"],
     restaurant: "茶廊 車門",
     url: "https://i.gyazo.com/439357c263e9b2668ee33f0ac3b8fe5f.jpg",
+    contentUrl:"",
+
     comment: "レトロな雰囲気のカフェ",
     instagram: "",
     link: "https://www.google.com/search?q=%E8%8C%B6%E5%BB%8A%E8%BB%8A%E9%96%80",
@@ -392,6 +425,8 @@ const foodData = [
     categories: ["カフェ","スイーツ"],
     restaurant: "NOTE",
     url: "/images/food15.jpg",
+    contentUrl:"",
+
     comment: "コメント",
     instagram: "https://www.instagram.com/note_kumagai/",
     link: "",
@@ -414,7 +449,10 @@ const foodData = [
     categories: ["スイーツ", "入りやすい"],
     restaurant: "甘味処鎌倉",
     url: "https://i.gyazo.com/bf6a42b53622fff047431bceb90e50ae.jpg",
+    contentUrl:"",
+
     comment: "わらびドリンクも美味しい。黒蜜は別売り(120円)でした",
+
     instagram: "https://www.instagram.com/kamakura.cafe/",
     link: "https://www.warabimochi-kamakura.com/",
     price: 820,
@@ -436,6 +474,8 @@ const foodData = [
     categories: ["洋食","スイーツ"],
     restaurant: "みのるダイニング",
     url: "/images/food10.jpg",
+    contentUrl:"",
+
     comment: "コメント",
     instagram: "https://www.instagram.com/minoru_junjo/",
     link: "https://www.minoriminoru.jp/morioka",
@@ -457,6 +497,7 @@ const foodData = [
     dish: "海鮮ちらし",
     categories: ["和食", "海鮮"],
     restaurant: "磯乃",
+    contentUrl:"",
     url: "https://i.gyazo.com/29463dd3092c3858e4aa56c9549b4305.jpg",
     comment:
       "新鮮な魚介が美味しい海鮮ちらし、とびっこのぷちぷちした食感がたまりません。",
@@ -480,6 +521,8 @@ const foodData = [
     categories: ["洋食","麺類"],
     restaurant: "FRESCHISSIMA フレスキッシマ",
     url: "/images/food14.jpg",
+    contentUrl:"",
+
     comment: "コメント",
     instagram: "https://www.instagram.com/freschissima_morioka/",
     link: "http://www.ariv.co.jp/freschissima.php",

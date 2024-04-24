@@ -20,7 +20,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
     openingHours,
   }) => {
     return (
-      <div className={`lg:w-1/3 md:w-1/2 w-full p-6`}>
+      <div className={`hover:opacity-85 cursor-pointer lg:w-1/3 md:w-1/2 w-full p-6`}>
         <div className="p-2 rounded-lg">
           <Image
             className="h-64 rounded-xl w-full object-cover object-center mb-4"

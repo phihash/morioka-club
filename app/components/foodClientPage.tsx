@@ -6,6 +6,7 @@ import { useState, memo } from "react";
 import FoodButton from "../components/foodButton";
 import FoodRadioButton from "../components/foodRadioButton";
 import foodData from "../data/foodData";
+import Link from "next/link";
 
 // eslint-disable-next-line react/display-name
 const FoodClientPage = memo(() => {
@@ -154,8 +155,10 @@ const FoodClientPage = memo(() => {
             />
           </div>
 
+
           <div className="flex flex-wrap mt-4">
             {/* アイテムエリア */}
+
             {foodItems.map((item, index) => {
               if (
                 selectedFoodCategories.some((category) =>
@@ -170,17 +173,21 @@ const FoodClientPage = memo(() => {
                     restaurant={item.restaurant}
                     comment={item.comment}
                     url={item.url}
+                    contentUrl={item.contentUrl}
                     instagram={item.instagram}
                     link={item.link}
                     price={item.price}
                     twitter={item.twitter}
                     openingHours={item.openingHours}
                   ></FoodItem>
+
+
                 );
               }
               return null;
             })}
           </div>
+
         </div>
       </div>
     </div>
@@ -191,6 +198,7 @@ interface FoodItemProps {
   dish: string;
   restaurant: string;
   url: string;
+  contentUrl:string;
   comment: string;
   instagram: string;
   link: string;

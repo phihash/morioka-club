@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "盛岡を感じる特産品や伝統的なおみやげを紹介します。",
   openGraph: {
     title: "もりおかクラブ | おみやげ",
-  description: "盛岡を感じる特産品や伝統的なおみやげを紹介します。",
+    description: "盛岡を感じる特産品や伝統的なおみやげを紹介します。",
 
     url: "https://morioka.club/souvenir",
     siteName: "もりおかクラブ | おみやげ",

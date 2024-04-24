@@ -4,10 +4,12 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://morioka.club/food"),
   title: "もりおかクラブ | 食べ物",
-  description: "有名な三大麺だけでなく、ゆったりできるカフェまで盛岡の美味しい食べ物を紹介します",
+  description:
+    "有名な三大麺だけでなく、ゆったりできるカフェまで盛岡の美味しい食べ物を紹介します",
   openGraph: {
     title: "もりおかクラブ | 食べ物",
-  description: "ゆうめいな三大麺だけでなく、ゆったりできるカフェまで盛岡の美味しい食べ物を紹介します",
+    description:
+      "ゆうめいな三大麺だけでなく、ゆったりできるカフェまで盛岡の美味しい食べ物を紹介します",
 
     url: "https://morioka.club/food",
     siteName: "もりおかクラブ | 食べ物",

@@ -47,12 +47,15 @@ const FoodClientPage = memo(() => {
       const [openHours, openMinutes] = openTime.split(":").map(Number);
       const openDate = new Date(now);
       openDate.setHours(openHours, openMinutes, 0, 0);
-      console.log(openTime,closeTime,openingHours)
+      console.log(openTime, closeTime, openingHours);
       const [closeHours, closeMinutes] = closeTime.split(":").map(Number);
       const closeDate = new Date(now);
       closeDate.setHours(closeHours, closeMinutes, 0, 0);
 
-      if (currentTime >= openDate.getTime() && currentTime <= closeDate.getTime()) {
+      if (
+        currentTime >= openDate.getTime() &&
+        currentTime <= closeDate.getTime()
+      ) {
         return true;
       }
     }
@@ -155,7 +158,6 @@ const FoodClientPage = memo(() => {
             />
           </div>
 
-
           <div className="flex flex-wrap mt-4">
             {/* アイテムエリア */}
 
@@ -171,7 +173,6 @@ const FoodClientPage = memo(() => {
                     key={index}
                     dish={item.dish}
                     restaurant={item.restaurant}
-                    comment={item.comment}
                     url={item.url}
                     contentUrl={item.contentUrl}
                     instagram={item.instagram}
@@ -180,14 +181,11 @@ const FoodClientPage = memo(() => {
                     twitter={item.twitter}
                     openingHours={item.openingHours}
                   ></FoodItem>
-
-
                 );
               }
               return null;
             })}
           </div>
-
         </div>
       </div>
     </div>
@@ -198,8 +196,7 @@ interface FoodItemProps {
   dish: string;
   restaurant: string;
   url: string;
-  contentUrl:string;
-  comment: string;
+  contentUrl: string;
   instagram: string;
   link: string;
   price: Number;

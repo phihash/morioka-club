@@ -30,7 +30,7 @@ async function getReview(id: string) {
   try {
     const data = await client.get({
       endpoint: "review",
-      contentId: "wdur97-nf",
+      contentId: id,
     });
     console.log("Fetched report:", data);
     return data;

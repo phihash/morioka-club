@@ -24,9 +24,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
         <div className="p-2 rounded-lg">
           <Link
             href={`food/${contentUrl}`}
-            rel="noopener noreferrer external"
             className=" hover:opacity-85 cursor-pointer"
-            target="_blank"
           >
             <Image
               className="h-64 rounded-xl w-full object-cover object-center mb-4"
@@ -80,7 +78,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
                 rel="noopener noreferrer"
                 target="_blank"
                 href={link}
-                aria-label="このおみやげを製造している会社のWebサイトを開く"
+                aria-label="このお店のWebサイトを開く"
               >
                 {" "}
                 <FaExternalLinkAlt size="30px" />{" "}
@@ -93,7 +91,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
                 rel="noopener noreferrer"
                 target="_blank"
                 href={twitter}
-                aria-label="このおみやげを製造している会社のXを開く"
+                aria-label="このお店の会社のXを開く"
               >
                 {" "}
                 <FaXTwitter size="30px" />{" "}
@@ -106,7 +104,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
                 rel="noopener noreferrer"
                 target="_blank"
                 href={instagram}
-                aria-label="このおみやげを製造している会社のInstagramを開く"
+                aria-label="このお店のInstagramを開く"
               >
                 {" "}
                 <FaInstagram size="32px" />{" "}

@@ -19,21 +19,21 @@ export default function Footer() {
           <div className="md:flex">
             <Link href="/food">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/food" ? "border-b-4 border-white pb-2" : ""}`}
-              >
+                className={`${zen_maru_gothic.className} hover:opacity-70 text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/food" ? "border-b-4 border-white pb-2" : ""}`}
+             >
                 食べ物
               </div>
             </Link>
             <Link href="/souvenir">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/souvenir" ? "border-b-4 border-white pb-2" : ""}`}
+                className={`${zen_maru_gothic.className} hover:opacity-70  text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/souvenir" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 おみやげ
               </div>
             </Link>
             <Link href="/spot">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/spot" ? "border-b-4 border-white pb-2" : ""}`}
+                className={`${zen_maru_gothic.className} hover:opacity-70  text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/spot" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 観光スポット
               </div>
@@ -41,14 +41,14 @@ export default function Footer() {
 
             <Link href="/facility">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/facility" ? "border-b-4 border-white pb-2" : ""}`}
+                className={`${zen_maru_gothic.className} hover:opacity-70  text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/facility" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 商業施設
               </div>
             </Link>
             <Link href="/report">
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/report" ? "border-b-4 border-white pb-2" : ""}`}
+                className={`${zen_maru_gothic.className} hover:opacity-70  text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/report" ? "border-b-4 border-white pb-2" : ""}`}
               >
                 レポート
               </div>
@@ -59,7 +59,7 @@ export default function Footer() {
               target="_blank"
             >
               <div
-                className={`${zen_maru_gothic.className} text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider`}
+                className={`${zen_maru_gothic.className} hover:opacity-70  text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider`}
               >
                 問い合わせ
               </div>

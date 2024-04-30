@@ -48,7 +48,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
           </h2>
           <div className="flex gap-6 mt-2">
             <p
-              className={`${noto_sans_jp.className}  text-base text-yellow-900 font-bold title-font`}
+              className={`${noto_sans_jp.className}  md:text-base text-sm text-yellow-900 font-bold title-font`}
             >
               {String(price)} 円
             </p>
@@ -56,7 +56,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
               new Date().toLocaleString("ja-JP", { weekday: "long" })
             ] ? (
               <p
-                className={`${noto_sans_jp.className}  text-base text-indigo-800 font-bold title-font`}
+                className={`${noto_sans_jp.className}  md:text-base text-sm text-indigo-800 font-bold title-font`}
               >
                 {new Date().toLocaleString("ja-JP", { weekday: "long" }) +
                   ": " +

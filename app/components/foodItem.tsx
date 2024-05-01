@@ -42,7 +42,7 @@ const foodItem: React.FC<FoodItemProps> = memo(
           </h3>
 
           <h2
-            className={`${noto_sans_jp.className}  text-xl text-gray-900 font-semibold title-font mb-3`}
+            className={`${noto_sans_jp.className}  text-xl text-gray-800 font-semibold title-font mb-3`}
           >
             {dish}
           </h2>

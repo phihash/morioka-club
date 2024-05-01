@@ -15,7 +15,7 @@ export default async function FoodPage({ params }: { params: Params }) {
         {review.title}
       </h1>
       <div
-        className={`pt-12 leading-loose pb-28 font-semibold ${noto_sans_jp.className} `}
+        className={`pt-12 leading-loose text-gray-700  pb-28 font-semibold ${noto_sans_jp.className} `}
         dangerouslySetInnerHTML={{ __html: sanitizedContent }}
       />
     </div>

@@ -4,7 +4,6 @@ import { zen_maru_gothic, noto_sans_jp } from "../../fonts";
 
 export default async function FoodPage({ params }: { params: Params }) {
   const { id } = params;
-  console.log(id);
   const review = await getReview(id);
   const sanitizedContent = DOMPurify.sanitize(review.body);
   return (
@@ -32,7 +31,6 @@ async function getReview(id: string) {
       endpoint: "review",
       contentId: id,
     });
-    console.log("Fetched report:", data);
     return data;
   } catch (error) {
     console.log(id);

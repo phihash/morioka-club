@@ -237,7 +237,7 @@ const foodData = [
     categories: ["スイーツ","カフェ"],
     restaurant: "紅茶の店しゅん",
     url: "/images/food20.jpg",
-    contentUrl:"",
+    contentUrl:"24w6tc98t",
     instagram: "",
     link: "https://teashun.com/",
     price: 450,

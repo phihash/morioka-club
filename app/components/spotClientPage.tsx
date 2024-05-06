@@ -9,7 +9,6 @@ const SpotPage = () => {
         <div className="w-11/12 mx-auto pb-12">
           {/* 大枠 */}
           <div className="mt-10 md:flex">
-            {/* でかいサイズは写真半分に */}
             <div className="md:w-1/2">
               <Image
                 className="rounded-xl w-full mb-4"
@@ -29,8 +28,6 @@ const SpotPage = () => {
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
                 東京駅を設計した辰野金吾が設計した建築物。
-                <br />
-                岩手銀行赤レンガ館は、岩手県盛岡市にある歴史的建造物で、1911年に建てられた。洋風建築の優れた例であり、観光地としても人気があり、博物館やイベント会場として利用されている。地域の文化的遺産として重要視されている。
               </p>
             </div>
           </div>

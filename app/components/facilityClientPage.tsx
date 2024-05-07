@@ -7,17 +7,21 @@ const FacilityPage = () => {
     <div className="bg-green-700 ">
       <div className="bg-white rounded-b-3xl">
         <div className="w-11/12 mx-auto pb-12">
-          {/* 大枠 */}
           <div className="mt-10 md:flex">
-            {/* でかいサイズは写真半分に */}
-            <div className="md:w-1/2">
-              <Image
-                className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/a2d845d90ec71197f21acbcd0cd9216e.jpg"
-                alt="盛岡駅ビルフェザンの写真"
-                width={600}
-                height={800}
-              />
+            <div className="md:w-1/2 hover:opacity-75 hover:cursor-pointer">
+              <Link
+                href="https://fesan-jp.com/"
+                rel="noopener noreferrer external"
+                target="_blank"
+              >
+                <Image
+                  className="rounded-xl w-full  mb-4"
+                  src="https://i.gyazo.com/a2d845d90ec71197f21acbcd0cd9216e.jpg"
+                  alt="盛岡駅ビルフェザンの写真"
+                  width={600}
+                  height={800}
+                />
+              </Link>
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
               <h2
@@ -33,7 +37,6 @@ const FacilityPage = () => {
               </p>
             </div>
           </div>
-          {/* くぎり */}
           <div className="mt-20 flex flex-col-reverse md:flex-row">
             <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
               <h2
@@ -50,39 +53,45 @@ const FacilityPage = () => {
                 2階にはアパレルショップと100円ショップセリア、道路側には飲食店が入居している。
               </p>
             </div>
-            <div className="md:w-1/2">
-              <Image
-                className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/dc4cbdd6df2d21ef8f9eb94237163c51.png"
-                alt="クロステラス盛岡の写真"
-                width={600}
-                height={800}
-              />
+            <div className="md:w-1/2 hover:opacity-75 hover:cursor-pointer">
+              <Link
+                href="https://crossterrace.jp/"
+                rel="noopener noreferrer external"
+                target="_blank"
+              >
+                <Image
+                  className="rounded-xl w-full  mb-4"
+                  src="https://i.gyazo.com/dc4cbdd6df2d21ef8f9eb94237163c51.png"
+                  alt="クロステラス盛岡の写真"
+                  width={600}
+                  height={800}
+                />
+              </Link>
             </div>
           </div>
           {/* くぎり */}
           <div className="mt-10 md:flex">
-            <div className="md:w-1/2">
-              <Image
-                className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/3bdf8089597443ec7f7429287e2888ad.png"
-                alt="盛岡バスセンターの写真"
-                width={600}
-                height={800}
-              />
-            </div>
-            <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
+            <div className="md:w-1/2 hover:opacity-75 hover:cursor-pointer">
               <Link
                 href="https://morioka-buscenter.jp/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <h2
-                  className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
-                >
-                  盛岡バスセンター
-                </h2>
+                <Image
+                  className="rounded-xl w-full  mb-4"
+                  src="https://i.gyazo.com/3bdf8089597443ec7f7429287e2888ad.png"
+                  alt="盛岡バスセンターの写真"
+                  width={600}
+                  height={800}
+                />
               </Link>
+            </div>
+            <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
+              <h2
+                className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
+              >
+                盛岡バスセンター
+              </h2>
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
@@ -91,7 +100,6 @@ const FacilityPage = () => {
               </p>
             </div>
           </div>
-          {/* くぎり */}
           <div className="mt-20 flex flex-col-reverse md:flex-row">
             <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
               <h2
@@ -107,26 +115,37 @@ const FacilityPage = () => {
                 元々はnanakと呼ばれた
               </p>
             </div>
-            <div className="md:w-1/2">
-              <Image
-                className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/84483389b4c0f0f3678f784b28fe6676.jpg"
-                alt="建設中のmonakaの写真"
-                width={600}
-                height={800}
-              />
+            <div className="md:w-1/2 hover:opacity-75 hover:cursor-pointer">
+              <Link
+                href="https://monaka-morioka.com/"
+                rel="noopener noreferrer external"
+                target="_blank"
+              >
+                <Image
+                  className="rounded-xl w-full  mb-4"
+                  src="https://i.gyazo.com/84483389b4c0f0f3678f784b28fe6676.jpg"
+                  alt="建設中のmonakaの写真"
+                  width={600}
+                  height={800}
+                />
+              </Link>
             </div>
           </div>
-          {/* くぎり */}
           <div className="mt-10 md:flex">
-            <div className="md:w-1/2">
-              <Image
-                className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png"
-                alt="川徳百貨店の写真"
-                width={600}
-                height={800}
-              />
+            <div className="md:w-1/2 hover:opacity-75 hover:cursor-pointer">
+              <Link
+                href="https://www.kawatoku.com/"
+                rel="noopener noreferrer external"
+                target="_blank"
+              >
+                <Image
+                  className="rounded-xl w-full  mb-4"
+                  src="https://i.gyazo.com/b4c3584ba891e4b97f635f64e5636bed.png"
+                  alt="川徳百貨店の写真"
+                  width={600}
+                  height={800}
+                />
+              </Link>
             </div>
             <div className="md:ml-12 mt-10 md:mt-0 md:w-1/2">
               <h2
@@ -142,19 +161,12 @@ const FacilityPage = () => {
               </p>
             </div>
           </div>
-          {/* くぎり */}
           <div className="mt-20 flex flex-col-reverse md:flex-row">
             <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
               <h2
                 className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
               >
-                <Link
-                  href="https://moss-build.com/"
-                  rel="noopener noreferrer external"
-                  target="_blank"
-                >
-                  <span className="hover:text-yellow-500">MOSS</span>
-                </Link>
+                MOSS
               </h2>
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
@@ -166,14 +178,20 @@ const FacilityPage = () => {
                 1Fには盛岡市を本社とする会社が展開するスーパーマーケットが入っている。
               </p>
             </div>
-            <div className="md:w-1/2">
-              <Image
-                className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/c7fd9dc5b6a345b321b34946e0bdfc5b.jpg"
-                alt="MOSSの写真"
-                width={600}
-                height={800}
-              />
+            <div className="md:w-1/2 hover:opacity-75 hover:cursor-pointer">
+              <Link
+                href="https://moss-build.com/"
+                rel="noopener noreferrer external"
+                target="_blank"
+              >
+                <Image
+                  className="rounded-xl w-full  mb-4"
+                  src="https://i.gyazo.com/c7fd9dc5b6a345b321b34946e0bdfc5b.jpg"
+                  alt="MOSSの写真"
+                  width={600}
+                  height={800}
+                />
+              </Link>
             </div>
           </div>
         </div>

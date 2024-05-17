@@ -6,8 +6,10 @@ export default async function FoodPage({ params }: { params: Params }) {
   const { id } = params;
   const review = await getReview(id);
   const sanitizedContent = DOMPurify.sanitize(review.body);
+
   return (
-    <div className="w-11/12 mx-auto px-3">
+    <>
+       <div className="w-11/12 mx-auto px-3">
       <h1
         className={`${zen_maru_gothic.className} font-semibold text-2xl pt-10 text-yellow-900`}
       >
@@ -18,6 +20,7 @@ export default async function FoodPage({ params }: { params: Params }) {
         dangerouslySetInnerHTML={{ __html: sanitizedContent }}
       />
     </div>
+    </>
   );
 }
 

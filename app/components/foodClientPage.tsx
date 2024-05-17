@@ -159,7 +159,6 @@ const FoodClientPage = memo(() => {
           </div>
 
           <div className="flex flex-wrap mt-4">
-
             {foodItems.map((item, index) => {
               if (
                 selectedFoodCategories.some((category) =>

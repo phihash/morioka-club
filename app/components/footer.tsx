@@ -20,7 +20,7 @@ export default function Footer() {
             <Link href="/food">
               <div
                 className={`${zen_maru_gothic.className} hover:opacity-70 text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/food" ? "border-b-4 border-white pb-2" : ""}`}
-             >
+              >
                 食べ物
               </div>
             </Link>

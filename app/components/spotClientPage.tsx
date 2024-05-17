@@ -113,9 +113,7 @@ const SpotPage = () => {
               />
             </div>
           </div>
-          {/* くぎり */}
           <div className="mt-10 md:flex">
-            {/* でかいサイズは写真半分に */}
             <div className="md:w-1/2">
               <Image
                 className="rounded-xl w-full  mb-4"
@@ -164,7 +162,6 @@ const SpotPage = () => {
               />
             </div>
           </div>
-          {/* くぎり */}
           <div className="mt-10 md:flex">
             <div className="md:w-1/2">
               <Image
@@ -190,31 +187,29 @@ const SpotPage = () => {
               </p>
             </div>
           </div>
-          {/* くぎり */}
           <div className="mt-20 flex flex-col-reverse md:flex-row">
             <div className="md:mr-12 mt-10 md:mt-0 md:w-1/2">
               <h2
                 className={`font-bold lg:text-3xl text-2xl  ${zen_maru_gothic.className} text-yellow-900`}
               >
-                マリオス展望室
+                三ツ石神社
               </h2>
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                マリオスの最上階,展望室から盛岡の景色を一望
+                二度と悪さをしないこととこの土地に来ないことを約束し、証として石に手形を残して南昌山の彼方に逃げ去った
               </p>
             </div>
             <div className="md:w-1/2">
               <Image
                 className="rounded-xl w-full  mb-4"
-                src="https://i.gyazo.com/f6f2af595a202092dc7fd5a900b996e3.jpg"
-                alt="マリオス展望室から見える盛岡市の景色の写真"
+                src="/images/spot7.jpg"
+                alt="三ツ石神社の石の写真"
                 width={600}
                 height={800}
               />
             </div>
           </div>
-          {/* くぎり */}
           <div className="mt-10 md:flex">
             <div className="md:w-1/2">
               <Image
@@ -238,6 +233,7 @@ const SpotPage = () => {
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </div>

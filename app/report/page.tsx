@@ -7,7 +7,6 @@ import Link from "next/link";
 async function getReports() {
   try {
     const data = await client.get({ endpoint: "report" });
-    console.log("Fetched reports:", data.contents);
     return data.contents;
   } catch (error) {
     console.error("Error fetching reports:", error);
@@ -43,7 +42,7 @@ const ReportPage = async () => {
                     {report.date.split("T")[0]}
                   </p>
                   <p
-                    className={`text-yellow-900 hover:opacity-65 active:opacity-65 ${zen_maru_gothic.className} md:text-2xl text-base font-semibold`}
+                    className={`text-yellow-900 hover:opacity-65 active:opacity-65 ${zen_maru_gothic.className} md:text-2xl text-xl font-semibold`}
                   >
                     {report.title}
                   </p>

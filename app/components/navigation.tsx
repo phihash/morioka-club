@@ -8,6 +8,8 @@ import { MdPlace } from "react-icons/md";
 import { FaRegBuilding } from "react-icons/fa";
 import { GiNotebook } from "react-icons/gi";
 import { MdOutlineFormatAlignLeft } from "react-icons/md";
+import { IoMdPerson } from "react-icons/io";
+
 
 const Navigation = () => {
   const pathname = usePathname();
@@ -53,6 +55,14 @@ const Navigation = () => {
           >
             <GiNotebook size={22} />
             レポート
+          </div>
+        </Link>
+        <Link href="/person">
+          <div
+            className={`${noto_sans_jp.className} font-semibold text-slate-500 hover:text-slate-800 p-3  w-max flex  items-center gap-2 ${pathname == "/person" ? "border-b-2 border-b-lime-600 text-slate-800" : ""} `}
+          >
+            <IoMdPerson size={22} />
+            人物
           </div>
         </Link>
         <Link

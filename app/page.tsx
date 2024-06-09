@@ -1,11 +1,9 @@
 import TopSlider from "./components/topSlider";
-import { noto_sans_jp, zen_maru_gothic, lexend } from "./fonts";
-import NewsTitleItem from "./components/newsTitleItem";
+import { noto_sans_jp, zen_maru_gothic } from "./fonts";
 export default function Home() {
   return (
     <div className="bg-green-700">
       <div className="bg-white rounded-b-3xl pb-24">
-        {/* pb-24でした */}
         <div className="md:py-10 py-6">
           <TopSlider />
         </div>
@@ -23,15 +21,6 @@ export default function Home() {
               もりおかクラブは、盛岡に転勤・出張が決まった方や観光に来る方が、事前に盛岡に関する情報を知ることができるサイトです。このサイトを見ることで盛岡を大まかに知ることができます！
             </p>
           </div>
-
-          {/* <div className="md:pt-24 md:pb-18 px-2 py-12">
-            <h2
-              className={`${lexend.className} text-3xl font-bold text-cyan-800 pb-8`}
-            >
-              News
-            </h2>
-            <NewsTitleItem />
-          </div> */}
         </div>
       </div>
     </div>

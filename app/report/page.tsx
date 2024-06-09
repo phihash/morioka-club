@@ -1,5 +1,4 @@
 import React from "react";
-import { Metadata } from "next";
 import { zen_maru_gothic, noto_sans_jp } from "../fonts";
 import { client } from "@/libs/client";
 import Link from "next/link";
@@ -7,6 +6,7 @@ import Link from "next/link";
 async function getReports() {
   try {
     const data = await client.get({ endpoint: "report" });
+    console.log(data.contents)
     return data.contents;
   } catch (error) {
     console.error("Error fetching reports:", error);

@@ -53,6 +53,13 @@ export default function Footer() {
                 レポート
               </div>
             </Link>
+            <Link href="/person">
+              <div
+                className={`${zen_maru_gothic.className} hover:opacity-70  text-xl text-white  font-bold w-max mx-4 my-6 tracking-wider ${pathname == "/person" ? "border-b-4 border-white pb-2" : ""}`}
+              >
+                人物
+              </div>
+            </Link>
             <Link
               href="https://forms.gle/MaLsb7jxoWMyRQ1V6"
               rel="noopener noreferrer external"

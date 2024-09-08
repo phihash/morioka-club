@@ -95,7 +95,7 @@ const FacilityPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                バスターミナルだけでなく、飲食店,カフェやホテルも充実した施設。
+                バスターミナルだけでなく、飲食店,カフェやホテル,サウナなども充実した施設。
                 <br />
               </p>
             </div>
@@ -110,9 +110,9 @@ const FacilityPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                現在建設中
+                「盛岡らしさ」のまんなかに がキャッチフレーズ
                 <br />
-                元々はnanakと呼ばれた
+                2024年7月にオープンしたばかり
               </p>
             </div>
             <div className="md:w-1/2 hover:opacity-75 hover:cursor-pointer">
@@ -123,8 +123,8 @@ const FacilityPage = () => {
               >
                 <Image
                   className="rounded-xl w-full  mb-4"
-                  src="https://i.gyazo.com/84483389b4c0f0f3678f784b28fe6676.jpg"
-                  alt="建設中のmonakaの写真"
+                  src="https://i.gyazo.com/7d66d50edf24955026f60229ab1720f1.jpg"
+                  alt="monakaの写真"
                   width={600}
                   height={800}
                 />
@@ -156,7 +156,7 @@ const FacilityPage = () => {
               <p
                 className={`mt-6 leading-loose ${noto_sans_jp.className} font-semibold text-gray-700 tracking-wide`}
               >
-                盛岡市にある老舗百貨店
+                盛岡市にある老舗百貨店。ロフトやサンリオショップなどもある。
                 <br />
               </p>
             </div>
